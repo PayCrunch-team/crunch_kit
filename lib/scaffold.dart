@@ -1,5 +1,6 @@
 import 'package:crunch_kit/back_button.dart';
 import 'package:crunch_kit/colors.dart';
+import 'package:crunch_kit/dimensions.dart';
 import 'package:crunch_kit/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -31,7 +32,7 @@ class CrunchScaffold extends StatelessWidget {
         Scaffold(
           resizeToAvoidBottomInset: false,
           extendBodyBehindAppBar: true,
-          backgroundColor: CrunchColors.background,
+          backgroundColor: CrunchColors.almostWhite,
           appBar: hideAppBar
               ? null
               : AppBar(
@@ -41,7 +42,12 @@ class CrunchScaffold extends StatelessWidget {
                           style: CrunchTextStyles.appBarTitle,
                         )
                       : null,
-                  leading: disableBack ? null : const CrunchBackButton(),
+                  leading: disableBack
+                      ? null
+                      : const Padding(
+                          padding: CrunchDimensions.verticalPadding,
+                          child: CrunchBackButton(),
+                        ),
                   centerTitle: true,
                   elevation: 0.0,
                   backgroundColor: Colors.transparent,
@@ -50,7 +56,9 @@ class CrunchScaffold extends StatelessWidget {
             padding: EdgeInsets.only(top: 14.h),
             child: body,
           ),
-          bottomNavigationBar: bottomNavigationBar,
+          bottomNavigationBar: SafeArea(
+            child: bottomNavigationBar ?? Container(),
+          ),
         ),
         Visibility(
           visible: showOverlay,
