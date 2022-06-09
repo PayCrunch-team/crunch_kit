@@ -22,10 +22,10 @@ class CrunchBackButton extends StatelessWidget {
       elevation: 0.0,
       color: CrunchColors.superLightGrey,
       shape: RoundedRectangleBorder(
-        borderRadius: CrunchDimensions.roundBorderRadius,
+        borderRadius: CrunchDimensions.circleBorderRadius,
       ),
       child: InkWell(
-        borderRadius: CrunchDimensions.roundBorderRadius,
+        borderRadius: CrunchDimensions.circleBorderRadius,
         onTap: () {
           unawaited(HapticFeedback.mediumImpact());
           if (onPressed != null) {

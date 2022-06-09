@@ -8,4 +8,9 @@ class CrunchTextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w700,
   );
+
+  static final primaryButton = TextStyle(
+    color: CrunchColors.almostWhite,
+    fontSize: 14.sp,
+  );
 }

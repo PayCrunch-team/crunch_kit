@@ -3,7 +3,6 @@ import 'package:crunch_kit/colors.dart';
 import 'package:crunch_kit/dimensions.dart';
 import 'package:crunch_kit/text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 
 class CrunchScaffold extends StatelessWidget {
   final bool hideAppBar;
@@ -42,23 +41,16 @@ class CrunchScaffold extends StatelessWidget {
                           style: CrunchTextStyles.appBarTitle,
                         )
                       : null,
-                  leading: disableBack
-                      ? null
-                      : const Padding(
-                          padding: CrunchDimensions.verticalPadding,
-                          child: CrunchBackButton(),
-                        ),
+                  leading: disableBack ? null : const CrunchBackButton(),
                   centerTitle: true,
                   elevation: 0.0,
                   backgroundColor: Colors.transparent,
                 ),
           body: Padding(
-            padding: EdgeInsets.only(top: 14.h),
+            padding: CrunchDimensions.horizontalPadding,
             child: body,
           ),
-          bottomNavigationBar: SafeArea(
-            child: bottomNavigationBar ?? Container(),
-          ),
+          bottomNavigationBar: bottomNavigationBar,
         ),
         Visibility(
           visible: showOverlay,
