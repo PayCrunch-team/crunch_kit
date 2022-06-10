@@ -13,4 +13,9 @@ class CrunchTextStyles {
     color: CrunchColors.almostWhite,
     fontSize: 14.sp,
   );
+
+  static final secondaryButton = TextStyle(
+    color: CrunchColors.payCrunchBlue,
+    fontSize: 14.sp,
+  );
 }

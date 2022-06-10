@@ -1,18 +1,14 @@
-import 'dart:async';
-
 import 'package:crunch_kit/colors.dart';
 import 'package:crunch_kit/dimensions.dart';
 import 'package:crunch_kit/text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';
 
-class CrunchPrimaryButton extends StatelessWidget {
+class CrunchSecondaryButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
 
-  const CrunchPrimaryButton({
+  const CrunchSecondaryButton({
     Key? key,
     required this.text,
     required this.onPressed,
@@ -22,24 +18,19 @@ class CrunchPrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: CrunchColors.payCrunchBlue,
+        primary: CrunchColors.almostWhite,
         fixedSize: Size(MediaQuery.of(context).size.width - 16.w, 6.h),
+        elevation: 1.0,
         shape: RoundedRectangleBorder(
           borderRadius: CrunchDimensions.circleBorderRadius,
         ),
       ),
       onPressed: () {
-        unawaited(HapticFeedback.mediumImpact());
         onPressed();
       },
-      child: Shimmer.fromColors(
-        baseColor: CrunchColors.almostWhite,
-        highlightColor: CrunchColors.superLightBlue,
-        period: const Duration(seconds: 4),
-        child: Text(
-          text,
-          style: CrunchTextStyles.primaryButton,
-        ),
+      child: Text(
+        text,
+        style: CrunchTextStyles.secondaryButton,
       ),
     );
   }
