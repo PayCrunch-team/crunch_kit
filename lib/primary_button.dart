@@ -5,6 +5,7 @@ import 'package:crunch_kit/dimensions.dart';
 import 'package:crunch_kit/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';
 
 class CrunchPrimaryButton extends StatelessWidget {
@@ -31,9 +32,14 @@ class CrunchPrimaryButton extends StatelessWidget {
         unawaited(HapticFeedback.mediumImpact());
         onPressed();
       },
-      child: Text(
-        text,
-        style: CrunchTextStyles.primaryButton,
+      child: Shimmer.fromColors(
+        baseColor: CrunchColors.almostWhite,
+        highlightColor: CrunchColors.superLightBlue,
+        period: const Duration(seconds: 4),
+        child: Text(
+          text,
+          style: CrunchTextStyles.primaryButton,
+        ),
       ),
     );
   }
