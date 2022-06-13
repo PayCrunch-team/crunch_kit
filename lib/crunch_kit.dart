@@ -1,5 +1,6 @@
 library crunch_kit;
 
+export 'app_bar.dart';
 export 'back_button.dart';
 export 'colors.dart';
 export 'dimensions.dart';
