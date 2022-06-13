@@ -1,6 +1,7 @@
 import 'package:crunch_kit/back_button.dart';
 import 'package:crunch_kit/colors.dart';
 import 'package:crunch_kit/dimensions.dart';
+import 'package:crunch_kit/floating_center_button.dart';
 import 'package:crunch_kit/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,8 @@ class CrunchScaffold extends StatelessWidget {
   final bool showOverlay;
   final Widget? overlay;
   final bool disableBack;
+  final bool isHomeScaffold;
+  final CrunchFloatingCenterButton? floatingCenterButton;
 
   const CrunchScaffold({
     Key? key,
@@ -22,6 +25,8 @@ class CrunchScaffold extends StatelessWidget {
     this.showOverlay = false,
     this.overlay,
     this.disableBack = false,
+    this.isHomeScaffold = false,
+    this.floatingCenterButton,
   }) : super(key: key);
 
   @override
@@ -32,6 +37,9 @@ class CrunchScaffold extends StatelessWidget {
           resizeToAvoidBottomInset: false,
           extendBodyBehindAppBar: true,
           backgroundColor: CrunchColors.almostWhite,
+          floatingActionButton: isHomeScaffold ? floatingCenterButton : null,
+          floatingActionButtonLocation:
+              isHomeScaffold ? FloatingActionButtonLocation.centerDocked : null,
           appBar: hideAppBar
               ? null
               : AppBar(
