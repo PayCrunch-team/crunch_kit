@@ -30,7 +30,9 @@ class CrunchScaffold extends StatelessWidget {
           backgroundColor: CrunchColors.almostWhite,
           appBar: appBar,
           body: Padding(
-            padding: CrunchDimensions.horizontalPadding,
+            padding: EdgeInsets.symmetric(
+              horizontal: CrunchDimensions.horizontalPadding,
+            ),
             child: body,
           ),
           bottomNavigationBar: bottomNavigationBar,

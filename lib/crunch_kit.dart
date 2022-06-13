@@ -4,6 +4,7 @@ export 'app_bar.dart';
 export 'back_button.dart';
 export 'colors.dart';
 export 'dimensions.dart';
+export 'item_card.dart';
 export 'primary_button.dart';
 export 'scaffold.dart';
 export 'secondary_button.dart';

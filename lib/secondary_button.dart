@@ -19,7 +19,7 @@ class CrunchSecondaryButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         primary: CrunchColors.almostWhite,
-        fixedSize: Size(MediaQuery.of(context).size.width - 16.w, 6.h),
+        fixedSize: Size(100.w - (CrunchDimensions.horizontalPadding * 2), 6.h),
         elevation: 1.0,
         shape: RoundedRectangleBorder(
           borderRadius: CrunchDimensions.circleBorderRadius,
