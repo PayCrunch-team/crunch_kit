@@ -7,7 +7,6 @@ class CrunchColors {
   static const darkBlue = Color(0xff0150C5);
 
   static const almostWhite = Color(0xfffafafa);
-  static const superLightGrey = Color(0xfff8fafc);
   static const silver = Color(0xffc0c0c0);
   static const grey = Color(0xff8c8c8c);
   static const darkGrey = Color(0xFF616161);

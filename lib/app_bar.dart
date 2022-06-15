@@ -17,7 +17,7 @@ class CrunchAppBar extends StatelessWidget {
       title: title != null
           ? Text(
               title!,
-              style: CrunchTextStyles.appBarTitle,
+              style: CrunchTextStyles.titleBlack,
             )
           : null,
       leading: disableBack ? null : const CrunchBackButton(),

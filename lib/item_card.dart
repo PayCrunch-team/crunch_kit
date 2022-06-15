@@ -16,8 +16,8 @@ class CrunchItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0.0,
-      color: CrunchColors.superLightGrey,
+      elevation: 8.0,
+      shadowColor: CrunchColors.superLightBlue,
       shape: RoundedRectangleBorder(
         borderRadius: CrunchDimensions.roundBorderRadius,
       ),
