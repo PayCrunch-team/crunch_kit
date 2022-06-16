@@ -11,7 +11,6 @@ class CrunchScaffold extends StatelessWidget {
   final bool showOverlay;
   final Widget? overlay;
   final bool disableBack;
-  final bool isHomeScaffold;
   final CrunchFloatingCenterButton? floatingCenterButton;
 
   const CrunchScaffold({
@@ -22,7 +21,6 @@ class CrunchScaffold extends StatelessWidget {
     this.showOverlay = false,
     this.overlay,
     this.disableBack = false,
-    this.isHomeScaffold = false,
     this.floatingCenterButton,
   }) : super(key: key);
 
@@ -34,9 +32,10 @@ class CrunchScaffold extends StatelessWidget {
           resizeToAvoidBottomInset: false,
           extendBodyBehindAppBar: true,
           backgroundColor: CrunchColors.almostWhite,
-          floatingActionButton: isHomeScaffold ? floatingCenterButton : null,
-          floatingActionButtonLocation:
-              isHomeScaffold ? FloatingActionButtonLocation.centerDocked : null,
+          floatingActionButton: floatingCenterButton,
+          floatingActionButtonLocation: floatingCenterButton != null
+              ? FloatingActionButtonLocation.centerDocked
+              : null,
           appBar: appBar,
           body: Padding(
             padding: EdgeInsets.symmetric(

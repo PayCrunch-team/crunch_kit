@@ -4,7 +4,6 @@ import 'package:crunch_kit/colors.dart';
 import 'package:crunch_kit/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:sizer/sizer.dart';
 
 class CrunchFloatingCenterButton extends StatelessWidget {
   final VoidCallback onPressed;
