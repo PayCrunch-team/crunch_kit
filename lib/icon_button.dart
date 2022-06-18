@@ -7,13 +7,13 @@ import 'package:sizer/sizer.dart';
 
 class CrunchIconButton extends StatelessWidget {
   final IconData icon;
-  final String label;
+  final String? label;
   final VoidCallback? onPressed;
 
   const CrunchIconButton({
     Key? key,
     required this.icon,
-    required this.label,
+    this.label,
     this.onPressed,
   }) : super(key: key);
 
@@ -36,10 +36,12 @@ class CrunchIconButton extends StatelessWidget {
               color: CrunchColors.payCrunchBlue,
               size: 22.sp,
             ),
-            Text(
-              label,
-              style: CrunchTextStyles.iconButton,
-            ),
+            label != null
+                ? Text(
+                    label!,
+                    style: CrunchTextStyles.iconButton,
+                  )
+                : Container(),
           ],
         ),
       ),

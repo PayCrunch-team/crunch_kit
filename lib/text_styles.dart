@@ -2,6 +2,29 @@ import 'package:crunch_kit/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+class CrunchText extends StatelessWidget {
+  final String text;
+  final TextStyle? style;
+  final int? maxLines;
+
+  const CrunchText(
+    this.text, {
+    Key? key,
+    this.style,
+    this.maxLines,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: style,
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
+    );
+  }
+}
+
 class CrunchTextStyles {
   static final titleBlack = TextStyle(
     color: CrunchColors.almostBlack,
@@ -11,6 +34,12 @@ class CrunchTextStyles {
 
   static final titleWhite = TextStyle(
     color: CrunchColors.almostWhite,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static final titleBlue = TextStyle(
+    color: CrunchColors.payCrunchBlue,
     fontSize: 16.sp,
     fontWeight: FontWeight.w700,
   );

@@ -1,11 +1,8 @@
-import 'package:crunch_kit/colors.dart';
-import 'package:crunch_kit/dimensions.dart';
-import 'package:crunch_kit/floating_center_button.dart';
-import 'package:crunch_kit/text_styles.dart';
+import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 
 class CrunchScaffold extends StatelessWidget {
-  final PreferredSizeWidget? appBar;
+  final String? title;
   final Widget? body;
   final Widget? bottomNavigationBar;
   final bool showOverlay;
@@ -15,7 +12,7 @@ class CrunchScaffold extends StatelessWidget {
 
   const CrunchScaffold({
     Key? key,
-    this.appBar,
+    this.title,
     this.body,
     this.bottomNavigationBar,
     this.showOverlay = false,
@@ -36,7 +33,18 @@ class CrunchScaffold extends StatelessWidget {
           floatingActionButtonLocation: floatingCenterButton != null
               ? FloatingActionButtonLocation.centerDocked
               : null,
-          appBar: appBar,
+          appBar: AppBar(
+            title: title != null
+                ? Text(
+                    title!,
+                    style: CrunchTextStyles.titleBlack,
+                  )
+                : null,
+            leading: disableBack ? null : const CrunchBackButton(),
+            centerTitle: true,
+            elevation: 0.0,
+            backgroundColor: CrunchColors.almostWhite,
+          ),
           body: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: CrunchDimensions.horizontalPadding,
