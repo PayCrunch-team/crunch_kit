@@ -64,13 +64,13 @@ class CrunchTextStyles {
 
   static final headingWhite1 = TextStyle(
     color: CrunchColors.almostWhite,
-    fontSize: 28.sp,
+    fontSize: 32.sp,
     fontWeight: FontWeight.w800,
   );
 
   static final headingBlack1 = TextStyle(
     color: CrunchColors.almostBlack,
-    fontSize: 28.sp,
+    fontSize: 32.sp,
     fontWeight: FontWeight.w800,
   );
 

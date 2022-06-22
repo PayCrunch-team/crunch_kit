@@ -14,7 +14,7 @@ class CrunchTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: Text(
+      child: CrunchText(
         text,
         style: CrunchTextStyles.secondaryButton,
       ),

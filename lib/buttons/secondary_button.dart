@@ -26,7 +26,7 @@ class CrunchSecondaryButton extends StatelessWidget {
       onPressed: () {
         onPressed();
       },
-      child: Text(
+      child: CrunchText(
         text,
         style: CrunchTextStyles.secondaryButton,
       ),

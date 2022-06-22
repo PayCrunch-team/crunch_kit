@@ -34,7 +34,7 @@ class CrunchPrimaryButton extends StatelessWidget {
         baseColor: CrunchColors.almostWhite,
         highlightColor: CrunchColors.superLightBlue,
         period: const Duration(seconds: 4),
-        child: Text(
+        child: CrunchText(
           text,
           style: CrunchTextStyles.primaryButton,
         ),

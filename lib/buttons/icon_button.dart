@@ -37,7 +37,7 @@ class CrunchIconButton extends StatelessWidget {
               size: 22.sp,
             ),
             label != null
-                ? Text(
+                ? CrunchText(
                     label!,
                     style: CrunchTextStyles.iconButton,
                   )
