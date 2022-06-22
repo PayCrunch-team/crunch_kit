@@ -18,6 +18,7 @@ class CrunchWhiteCard extends StatelessWidget {
     return Card(
       elevation: 0.0,
       color: CrunchColors.superLightWhite,
+      margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
         borderRadius: CrunchDimensions.roundBorderRadius,
       ),

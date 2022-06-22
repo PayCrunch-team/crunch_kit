@@ -1,12 +1,12 @@
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 
-class CrunchItemCard extends StatelessWidget {
+class CrunchBlueGradientCard extends StatelessWidget {
   final double? height;
   final double? width;
   final Widget? child;
 
-  const CrunchItemCard({
+  const CrunchBlueGradientCard({
     Key? key,
     this.height,
     this.width,
@@ -18,6 +18,7 @@ class CrunchItemCard extends StatelessWidget {
     return Card(
       elevation: 8.0,
       shadowColor: CrunchColors.superLightBlue,
+      margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
         borderRadius: CrunchDimensions.roundBorderRadius,
       ),

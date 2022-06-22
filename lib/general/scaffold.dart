@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class CrunchScaffold extends StatelessWidget {
   final String? title;
+  final PreferredSizeWidget? appBar;
   final Widget? body;
   final Widget? bottomNavigationBar;
   final bool showOverlay;
@@ -13,6 +14,7 @@ class CrunchScaffold extends StatelessWidget {
   const CrunchScaffold({
     Key? key,
     this.title,
+    this.appBar,
     this.body,
     this.bottomNavigationBar,
     this.showOverlay = false,
@@ -33,18 +35,19 @@ class CrunchScaffold extends StatelessWidget {
           floatingActionButtonLocation: floatingCenterButton != null
               ? FloatingActionButtonLocation.centerDocked
               : null,
-          appBar: AppBar(
-            title: title != null
-                ? Text(
-                    title!,
-                    style: CrunchTextStyles.titleBlack,
-                  )
-                : null,
-            leading: disableBack ? null : const CrunchBackButton(),
-            centerTitle: true,
-            elevation: 0.0,
-            backgroundColor: CrunchColors.almostWhite,
-          ),
+          appBar: appBar ??
+              AppBar(
+                title: title != null
+                    ? Text(
+                        title!,
+                        style: CrunchTextStyles.titleBlack,
+                      )
+                    : null,
+                leading: disableBack ? null : const CrunchBackButton(),
+                centerTitle: true,
+                elevation: 0.0,
+                backgroundColor: CrunchColors.almostWhite,
+              ),
           body: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: CrunchDimensions.horizontalPadding,
