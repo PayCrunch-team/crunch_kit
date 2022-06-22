@@ -1,4 +1,4 @@
-import 'package:crunch_kit/colors.dart';
+import 'package:crunch_kit/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CrunchTextFieldStyles {

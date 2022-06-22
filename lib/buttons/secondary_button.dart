@@ -1,6 +1,4 @@
-import 'package:crunch_kit/colors.dart';
-import 'package:crunch_kit/dimensions.dart';
-import 'package:crunch_kit/text_styles.dart';
+import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
