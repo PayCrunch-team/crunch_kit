@@ -26,6 +26,12 @@ class CrunchText extends StatelessWidget {
 }
 
 class CrunchTextStyles {
+  static final tileTitleBlack = TextStyle(
+    color: CrunchColors.almostBlack,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+  );
+
   static final titleBlack = TextStyle(
     color: CrunchColors.almostBlack,
     fontSize: 16.sp,

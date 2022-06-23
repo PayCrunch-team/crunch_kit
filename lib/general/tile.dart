@@ -30,7 +30,7 @@ class CrunchTile extends StatelessWidget {
         title: title != null
             ? CrunchText(
                 title!,
-                style: CrunchTextStyles.titleBlack,
+                style: CrunchTextStyles.tileTitleBlack,
               )
             : null,
         subtitle: subTitle != null
