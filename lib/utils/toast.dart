@@ -8,7 +8,7 @@ class CrunchToast {
       toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.BOTTOM,
       timeInSecForIosWeb: 1,
-      fontSize: 14.sp,
+      fontSize: 12.sp,
     );
   }
 }
