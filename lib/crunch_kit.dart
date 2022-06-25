@@ -8,6 +8,7 @@ export 'buttons/secondary_button.dart';
 export 'buttons/social_button.dart';
 export 'buttons/text_button.dart';
 export 'cards/blue_gradient_card.dart';
+export 'cards/loading_card.dart';
 export 'cards/white_card.dart';
 export 'general/bottom_nav_bar.dart';
 export 'general/bottom_nav_bar.dart';
