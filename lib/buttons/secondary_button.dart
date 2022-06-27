@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 
 class CrunchSecondaryButton extends StatelessWidget {
@@ -24,6 +27,7 @@ class CrunchSecondaryButton extends StatelessWidget {
         ),
       ),
       onPressed: () {
+        unawaited(HapticFeedback.mediumImpact());
         onPressed();
       },
       child: CrunchText(

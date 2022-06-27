@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 
 class CrunchTile extends StatelessWidget {
@@ -41,7 +44,10 @@ class CrunchTile extends StatelessWidget {
             : null,
         leading: leading,
         trailing: trailing,
-        onTap: onTap,
+        onTap: () {
+          unawaited(HapticFeedback.mediumImpact());
+          onTap!();
+        },
       ),
     );
   }
