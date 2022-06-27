@@ -7,13 +7,13 @@ import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';
 
 class CrunchPrimaryButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String text;
 
   const CrunchPrimaryButton({
     Key? key,
+    this.onPressed,
     required this.text,
-    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -26,19 +26,26 @@ class CrunchPrimaryButton extends StatelessWidget {
           borderRadius: CrunchDimensions.circleBorderRadius,
         ),
       ),
-      onPressed: () {
-        unawaited(HapticFeedback.mediumImpact());
-        onPressed();
-      },
-      child: Shimmer.fromColors(
-        baseColor: CrunchColors.almostWhite,
-        highlightColor: CrunchColors.superLightBlue,
-        period: const Duration(seconds: 4),
-        child: CrunchText(
-          text,
-          style: CrunchTextStyles.primaryButton,
-        ),
-      ),
+      onPressed: onPressed != null
+          ? () {
+              unawaited(HapticFeedback.mediumImpact());
+              onPressed!();
+            }
+          : null,
+      child: onPressed != null
+          ? Shimmer.fromColors(
+              baseColor: CrunchColors.almostWhite,
+              highlightColor: CrunchColors.superLightBlue,
+              period: const Duration(seconds: 4),
+              child: CrunchText(
+                text,
+                style: CrunchTextStyles.primaryButton,
+              ),
+            )
+          : CrunchText(
+              text,
+              style: CrunchTextStyles.primaryButton,
+            ),
     );
   }
 }

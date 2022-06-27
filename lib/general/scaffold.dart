@@ -10,6 +10,7 @@ class CrunchScaffold extends StatelessWidget {
   final Widget? overlay;
   final bool disableBack;
   final CrunchFloatingCenterButton? floatingCenterButton;
+  final bool? resizeToAvoidBottomInsets;
 
   const CrunchScaffold({
     Key? key,
@@ -21,6 +22,7 @@ class CrunchScaffold extends StatelessWidget {
     this.overlay,
     this.disableBack = false,
     this.floatingCenterButton,
+    this.resizeToAvoidBottomInsets = false,
   }) : super(key: key);
 
   @override
@@ -28,7 +30,7 @@ class CrunchScaffold extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          resizeToAvoidBottomInset: false,
+          resizeToAvoidBottomInset: resizeToAvoidBottomInsets,
           extendBodyBehindAppBar: true,
           backgroundColor: CrunchColors.almostWhite,
           floatingActionButton: floatingCenterButton,
