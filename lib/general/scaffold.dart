@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class CrunchScaffold extends StatelessWidget {
   final String? title;
@@ -7,10 +10,10 @@ class CrunchScaffold extends StatelessWidget {
   final Widget? body;
   final Widget? bottomNavigationBar;
   final bool showOverlay;
-  final Widget? overlay;
   final bool disableBack;
   final CrunchFloatingCenterButton? floatingCenterButton;
   final bool? resizeToAvoidBottomInsets;
+  final String? imagePath;
 
   const CrunchScaffold({
     Key? key,
@@ -19,10 +22,10 @@ class CrunchScaffold extends StatelessWidget {
     this.body,
     this.bottomNavigationBar,
     this.showOverlay = false,
-    this.overlay,
     this.disableBack = false,
     this.floatingCenterButton,
     this.resizeToAvoidBottomInsets = false,
+    this.imagePath,
   }) : super(key: key);
 
   @override
@@ -57,10 +60,24 @@ class CrunchScaffold extends StatelessWidget {
           ),
           bottomNavigationBar: bottomNavigationBar,
         ),
-        Visibility(
-          visible: showOverlay,
-          child: overlay ?? Container(),
-        ),
+        imagePath != null
+            ? Visibility(
+                visible: showOverlay,
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Container(
+                    color: CrunchColors.darkGrey.withOpacity(0.5),
+                    child: Center(
+                      child: Lottie.asset(
+                        imagePath!,
+                        height: 75.0,
+                        width: 75.0,
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            : Container(),
       ],
     );
   }
