@@ -31,7 +31,6 @@ class CrunchScaffold extends StatelessWidget {
       children: [
         Scaffold(
           resizeToAvoidBottomInset: resizeToAvoidBottomInsets,
-          extendBodyBehindAppBar: true,
           backgroundColor: CrunchColors.almostWhite,
           floatingActionButton: floatingCenterButton,
           floatingActionButtonLocation: floatingCenterButton != null
