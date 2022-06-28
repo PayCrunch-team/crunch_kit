@@ -11,6 +11,7 @@ class CrunchScaffold extends StatelessWidget {
   final Widget? bottomNavigationBar;
   final bool showOverlay;
   final bool disableBack;
+  final bool disableAppBar;
   final CrunchFloatingCenterButton? floatingCenterButton;
   final bool? resizeToAvoidBottomInsets;
   final String? imagePath;
@@ -23,9 +24,10 @@ class CrunchScaffold extends StatelessWidget {
     this.bottomNavigationBar,
     this.showOverlay = false,
     this.disableBack = false,
+    this.disableAppBar = false,
     this.floatingCenterButton,
-    this.resizeToAvoidBottomInsets = false,
     this.imagePath,
+    this.resizeToAvoidBottomInsets = true,
   }) : super(key: key);
 
   @override
@@ -39,19 +41,21 @@ class CrunchScaffold extends StatelessWidget {
           floatingActionButtonLocation: floatingCenterButton != null
               ? FloatingActionButtonLocation.centerDocked
               : null,
-          appBar: appBar ??
-              AppBar(
-                title: title != null
-                    ? Text(
-                        title!,
-                        style: CrunchTextStyles.titleBlack,
-                      )
-                    : null,
-                leading: disableBack ? null : const CrunchBackButton(),
-                centerTitle: true,
-                elevation: 0.0,
-                backgroundColor: CrunchColors.almostWhite,
-              ),
+          appBar: disableAppBar
+              ? null
+              : appBar ??
+                  AppBar(
+                    title: title != null
+                        ? Text(
+                            title!,
+                            style: CrunchTextStyles.titleBlack,
+                          )
+                        : null,
+                    leading: disableBack ? null : const CrunchBackButton(),
+                    centerTitle: true,
+                    elevation: 0.0,
+                    backgroundColor: CrunchColors.almostWhite,
+                  ),
           body: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: CrunchDimensions.horizontalPadding,
