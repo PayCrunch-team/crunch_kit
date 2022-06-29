@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:sizer/sizer.dart';
 
 class CrunchScaffold extends StatelessWidget {
   final String? title;
@@ -14,7 +15,7 @@ class CrunchScaffold extends StatelessWidget {
   final bool disableAppBar;
   final CrunchFloatingCenterButton? floatingCenterButton;
   final bool? resizeToAvoidBottomInsets;
-  final String? imagePath;
+  final String? overlayAssetPath;
 
   const CrunchScaffold({
     Key? key,
@@ -26,7 +27,7 @@ class CrunchScaffold extends StatelessWidget {
     this.disableBack = false,
     this.disableAppBar = false,
     this.floatingCenterButton,
-    this.imagePath,
+    this.overlayAssetPath,
     this.resizeToAvoidBottomInsets = true,
   }) : super(key: key);
 
@@ -64,24 +65,22 @@ class CrunchScaffold extends StatelessWidget {
           ),
           bottomNavigationBar: bottomNavigationBar,
         ),
-        imagePath != null
-            ? Visibility(
-                visible: showOverlay,
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                  child: Container(
-                    color: CrunchColors.darkGrey.withOpacity(0.5),
-                    child: Center(
-                      child: Lottie.asset(
-                        imagePath!,
-                        height: 75.0,
-                        width: 75.0,
-                      ),
-                    ),
-                  ),
+        Visibility(
+          visible: showOverlay,
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+            child: Container(
+              color: CrunchColors.darkGrey.withOpacity(0.4),
+              child: Center(
+                child: Lottie.asset(
+                  overlayAssetPath ?? 'assets/lottie/loading.json',
+                  height: 24.w,
+                  width: 24.w,
                 ),
-              )
-            : Container(),
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
