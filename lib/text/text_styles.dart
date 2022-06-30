@@ -68,6 +68,12 @@ class CrunchTextStyles {
     fontWeight: FontWeight.w500,
   );
 
+  static final subTitleRed = TextStyle(
+    color: CrunchColors.superDarkRed,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+  );
+
   static final headingWhite1 = TextStyle(
     color: CrunchColors.almostWhite,
     fontSize: 30.sp,

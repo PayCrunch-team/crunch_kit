@@ -7,60 +7,56 @@ import 'package:sizer/sizer.dart';
 class CrunchErrorCard extends StatelessWidget {
   final String? title;
   final String? details;
-  const CrunchErrorCard({Key? key, this.title, this.details}) : super(key: key);
+  final double? height;
+  final double? width;
+
+  const CrunchErrorCard({
+    Key? key,
+    this.title,
+    this.details,
+    this.height,
+    this.width,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 2.w),
-      decoration: BoxDecoration(
-        color: CrunchColors.superLightRed,
+    return Card(
+      elevation: 0.0,
+      color: CrunchColors.superLightRed,
+      margin: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(
         borderRadius: CrunchDimensions.roundBorderRadius,
-        border: Border.all(
-          color: CrunchColors.superDarkRed,
-        ),
       ),
-      child: Padding(
-        padding: EdgeInsets.all(2.w),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Row(
-              children: [
-                Icon(
-                  Icons.error_outline_outlined,
-                  color: CrunchColors.superDarkRed,
-                  size: 16.sp,
-                ),
-                SizedBox(
-                  width: 2.w,
-                ),
-                CrunchText(
-                  title ?? 'Oops!',
-                  style: CrunchTextStyles.tileTitleBlack,
-                ),
-              ],
-            ),
-            SizedBox(height: 1.h),
-            Row(
-              children: [
-                SizedBox(
-                  width: 8.w,
-                ),
-                Expanded(
-                  child: CrunchText(
-                    details ?? 'Something went wrong, please try again later',
-                    style: CrunchTextStyles.subTitleWhite.copyWith(
-                      color: CrunchColors.superDarkRed,
-                      fontSize: 12.sp,
-                    ),
+      child: SizedBox(
+        height: height,
+        width: width,
+        child: Padding(
+          padding: EdgeInsets.all(CrunchDimensions.horizontalPadding),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    Icons.error_outline_outlined,
+                    color: CrunchColors.superDarkRed,
+                    size: 16.sp,
                   ),
-                ),
-              ],
-            ),
-          ],
+                  SizedBox(width: 2.w),
+                  CrunchText(
+                    title ?? 'Ah shit, here we go again...🤦🏻‍♂️',
+                    style: CrunchTextStyles.tileTitleBlack,
+                  ),
+                ],
+              ),
+              CrunchText(
+                details ??
+                    'There was a fuck up from our end and our best minds are on it. Hang on!',
+                style: CrunchTextStyles.subTitleRed,
+              ),
+            ],
+          ),
         ),
       ),
     );
