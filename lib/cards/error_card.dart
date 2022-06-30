@@ -54,6 +54,7 @@ class CrunchErrorCard extends StatelessWidget {
                 details ??
                     'There was a fuck up from our end and our best minds are on it. Hang on!',
                 style: CrunchTextStyles.subTitleRed,
+                maxLines: 7,
               ),
             ],
           ),

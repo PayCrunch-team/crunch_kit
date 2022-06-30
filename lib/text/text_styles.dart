@@ -19,7 +19,7 @@ class CrunchText extends StatelessWidget {
     return Text(
       text,
       style: style,
-      maxLines: maxLines ?? 2,
+      maxLines: maxLines ?? 3,
       overflow: TextOverflow.ellipsis,
     );
   }
