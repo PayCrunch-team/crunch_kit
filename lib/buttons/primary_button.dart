@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:crunch_kit/crunch_kit.dart';
+import 'package:crunch_kit/text/shimmer_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';
 
 class CrunchPrimaryButton extends StatelessWidget {
@@ -33,10 +33,7 @@ class CrunchPrimaryButton extends StatelessWidget {
             }
           : null,
       child: onPressed != null
-          ? Shimmer.fromColors(
-              baseColor: CrunchColors.almostWhite,
-              highlightColor: CrunchColors.superLightBlue,
-              period: const Duration(seconds: 4),
+          ? CrunchShimmerText(
               child: CrunchText(
                 text,
                 style: CrunchTextStyles.primaryButton,
