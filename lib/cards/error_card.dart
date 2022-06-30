@@ -50,6 +50,7 @@ class CrunchErrorCard extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 1.h),
               CrunchText(
                 details ??
                     'There was a fuck up from our end and our best minds are on it. Hang on!',
