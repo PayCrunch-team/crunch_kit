@@ -18,6 +18,7 @@ export 'general/tile.dart';
 export 'text/shimmer_text.dart';
 export 'text/text_field_styles.dart';
 export 'text/text_styles.dart';
+export 'text/text_input_field_styles.dart';
 export 'utils/colors.dart';
 export 'utils/colors.dart';
 export 'utils/dimensions.dart';
