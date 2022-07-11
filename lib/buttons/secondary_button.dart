@@ -31,7 +31,7 @@ class CrunchSecondaryButton extends StatelessWidget {
         onPressed();
       },
       child: CrunchText(
-        text,
+        text.toUpperCase(),
         style: CrunchTextStyles.secondaryButton,
       ),
     );

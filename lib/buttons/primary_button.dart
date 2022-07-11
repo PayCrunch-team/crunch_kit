@@ -38,7 +38,7 @@ class CrunchPrimaryButton extends StatelessWidget {
         child: Center(
           child: CrunchShimmerText(
             child: CrunchText(
-              text,
+              text.toUpperCase(),
               style: CrunchTextStyles.primaryButton,
             ),
           ),
