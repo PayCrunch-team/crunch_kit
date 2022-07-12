@@ -31,9 +31,12 @@ class CrunchTile extends StatelessWidget {
       ),
       child: ListTile(
         title: title != null
-            ? CrunchText(
-                title!,
-                style: CrunchTextStyles.tileTitleBlack,
+            ? Flexible(
+                child: CrunchText(
+                  title!,
+                  style: CrunchTextStyles.tileTitleBlack,
+                  maxLines: 1,
+                ),
               )
             : null,
         subtitle: subTitle != null
