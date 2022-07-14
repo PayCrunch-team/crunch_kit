@@ -1,10 +1,7 @@
-import 'dart:developer';
-
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:crunch_kit/text/text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/button_list.dart';
-import 'package:flutter_signin_button/button_view.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
 
@@ -39,17 +36,19 @@ class CrunchSocialButton extends StatelessWidget {
       logo = 'assets/logo/google-icon.svg';
     }
 
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: bgColor,
-        elevation: 1.0,
-        shape: RoundedRectangleBorder(
-          borderRadius: CrunchDimensions.roundBorderRadius,
+    return SizedBox(
+      height: 7.h,
+      width: 100.w - (CrunchDimensions.horizontalPadding * 2),
+      child: NeumorphicButton(
+        provideHapticFeedback: false,
+        style: NeumorphicStyle(
+          color: bgColor,
+          shape: NeumorphicShape.flat,
+          boxShape: NeumorphicBoxShape.roundRect(
+            CrunchDimensions.circleBorderRadius,
+          ),
         ),
-      ),
-      onPressed: onPressed,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.5.h),
+        onPressed: onPressed,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -58,13 +57,8 @@ class CrunchSocialButton extends StatelessWidget {
               height: 2.h,
               color: logoColor,
             ),
-            SizedBox(
-              width: 6.w,
-            ),
-            Text(
-              text,
-              style: textStyle,
-            )
+            SizedBox(width: 6.w),
+            Text(text, style: textStyle)
           ],
         ),
       ),
