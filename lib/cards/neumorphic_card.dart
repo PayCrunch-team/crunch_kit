@@ -4,17 +4,19 @@ import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-class CrunchBlueGradientCard extends StatelessWidget {
+class CrunchNeumorphicCard extends StatelessWidget {
   final double? height;
   final double? width;
   final Widget? child;
+  final Color? color;
   final GestureTapCallback? onTap;
 
-  const CrunchBlueGradientCard({
+  const CrunchNeumorphicCard({
     Key? key,
     this.height,
     this.width,
     this.child,
+    this.color,
     this.onTap,
   }) : super(key: key);
 
@@ -32,7 +34,7 @@ class CrunchBlueGradientCard extends StatelessWidget {
         width: width,
         child: Neumorphic(
           style: NeumorphicStyle(
-            color: CrunchColors.payCrunchBlue,
+            color: color ?? CrunchColors.almostWhite,
             shape: NeumorphicShape.convex,
             boxShape: NeumorphicBoxShape.roundRect(
               CrunchDimensions.roundBorderRadius,
