@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,13 +6,13 @@ import 'package:sizer/sizer.dart';
 class CrunchIconButton extends StatelessWidget {
   final IconData icon;
   final String? label;
-  final VoidCallback? onPressed;
+  final VoidCallback onPressed;
 
   const CrunchIconButton({
     Key? key,
     required this.icon,
     this.label,
-    this.onPressed,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -24,9 +22,9 @@ class CrunchIconButton extends StatelessWidget {
       width: 18.w,
       child: InkWell(
         borderRadius: CrunchDimensions.circleBorderRadius,
-        onTap: () {
-          unawaited(HapticFeedback.mediumImpact());
-          onPressed!();
+        onTap: () async {
+          await HapticFeedback.mediumImpact();
+          onPressed();
         },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

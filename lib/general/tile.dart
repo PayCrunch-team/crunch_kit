@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,7 +8,7 @@ class CrunchTile extends StatelessWidget {
   final String? subTitle;
   final Widget? leading;
   final Widget? trailing;
-  final GestureTapCallback? onTap;
+  final GestureTapCallback? onPressed;
 
   const CrunchTile({
     Key? key,
@@ -18,16 +16,16 @@ class CrunchTile extends StatelessWidget {
     this.subTitle,
     this.leading,
     this.trailing,
-    this.onTap,
+    this.onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap != null
-          ? () {
-              unawaited(HapticFeedback.mediumImpact());
-              onTap!();
+      onTap: onPressed != null
+          ? () async {
+              await HapticFeedback.mediumImpact();
+              onPressed!();
             }
           : null,
       child: Container(

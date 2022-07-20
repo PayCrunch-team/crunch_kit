@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -26,8 +24,8 @@ class CrunchSecondaryButton extends StatelessWidget {
           borderRadius: CrunchDimensions.circleBorderRadius,
         ),
       ),
-      onPressed: () {
-        unawaited(HapticFeedback.mediumImpact());
+      onPressed: () async {
+        await HapticFeedback.mediumImpact();
         onPressed();
       },
       child: CrunchText(

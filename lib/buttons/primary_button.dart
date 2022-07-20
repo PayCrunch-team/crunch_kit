@@ -1,17 +1,15 @@
-import 'dart:async';
-
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:sizer/sizer.dart';
 
 class CrunchPrimaryButton extends StatelessWidget {
-  final VoidCallback? onPressed;
+  final VoidCallback onPressed;
   final String text;
 
   const CrunchPrimaryButton({
     Key? key,
-    this.onPressed,
+    required this.onPressed,
     required this.text,
   }) : super(key: key);
 
@@ -29,12 +27,10 @@ class CrunchPrimaryButton extends StatelessWidget {
             CrunchDimensions.circleBorderRadius,
           ),
         ),
-        onPressed: onPressed != null
-            ? () {
-                unawaited(HapticFeedback.mediumImpact());
-                onPressed!();
-              }
-            : null,
+        onPressed: () async {
+          await HapticFeedback.mediumImpact();
+          onPressed();
+        },
         child: Center(
           child: CrunchShimmerText(
             child: CrunchText(

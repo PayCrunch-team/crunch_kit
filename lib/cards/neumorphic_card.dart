@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
@@ -9,7 +7,7 @@ class CrunchNeumorphicCard extends StatelessWidget {
   final double? width;
   final Widget? child;
   final Color? color;
-  final GestureTapCallback? onTap;
+  final GestureTapCallback? onPressed;
 
   const CrunchNeumorphicCard({
     Key? key,
@@ -17,16 +15,16 @@ class CrunchNeumorphicCard extends StatelessWidget {
     this.width,
     this.child,
     this.color,
-    this.onTap,
+    this.onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap != null
-          ? () {
-              unawaited(HapticFeedback.mediumImpact());
-              onTap!();
+      onTap: onPressed != null
+          ? () async {
+              await HapticFeedback.mediumImpact();
+              onPressed!();
             }
           : null,
       child: SizedBox(
@@ -36,6 +34,7 @@ class CrunchNeumorphicCard extends StatelessWidget {
           style: NeumorphicStyle(
             color: color ?? CrunchColors.almostWhite,
             shape: NeumorphicShape.flat,
+            lightSource: LightSource.top,
             boxShape: NeumorphicBoxShape.roundRect(
               CrunchDimensions.roundBorderRadius,
             ),

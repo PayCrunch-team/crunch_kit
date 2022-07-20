@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,14 +23,16 @@ class CrunchBackButton extends StatelessWidget {
       ),
       child: InkWell(
         borderRadius: CrunchDimensions.circleBorderRadius,
-        onTap: () {
-          unawaited(HapticFeedback.mediumImpact());
-          if (onPressed != null) {
-            onPressed!();
-          } else {
-            Navigator.maybePop(context);
-          }
-        },
+        onTap: onPressed != null
+            ? () async {
+                await HapticFeedback.mediumImpact();
+                if (onPressed != null) {
+                  onPressed!();
+                } else {
+                  Navigator.maybePop(context);
+                }
+              }
+            : null,
         child: Icon(
           Icons.chevron_left_rounded,
           color: CrunchColors.almostBlack,
