@@ -23,16 +23,14 @@ class CrunchBackButton extends StatelessWidget {
       ),
       child: InkWell(
         borderRadius: CrunchDimensions.circleBorderRadius,
-        onTap: onPressed != null
-            ? () async {
-                await HapticFeedback.mediumImpact();
-                if (onPressed != null) {
-                  onPressed!();
-                } else {
-                  Navigator.maybePop(context);
-                }
-              }
-            : null,
+        onTap: () async {
+          await HapticFeedback.mediumImpact();
+          if (onPressed != null) {
+            onPressed!();
+          } else {
+            Navigator.maybePop(context);
+          }
+        },
         child: Icon(
           Icons.chevron_left_rounded,
           color: CrunchColors.almostBlack,
