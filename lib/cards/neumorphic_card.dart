@@ -24,6 +24,7 @@ class CrunchNeumorphicCard extends StatelessWidget {
       onTap: onPressed != null
           ? () async {
               await HapticFeedback.mediumImpact();
+              FocusManager.instance.primaryFocus?.unfocus();
               onPressed!();
             }
           : null,

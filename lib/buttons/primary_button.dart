@@ -29,6 +29,7 @@ class CrunchPrimaryButton extends StatelessWidget {
         ),
         onPressed: () async {
           await HapticFeedback.mediumImpact();
+          FocusManager.instance.primaryFocus?.unfocus();
           onPressed();
         },
         child: Center(

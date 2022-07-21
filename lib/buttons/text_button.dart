@@ -16,6 +16,7 @@ class CrunchTextButton extends StatelessWidget {
     return TextButton(
       onPressed: () async {
         await HapticFeedback.mediumImpact();
+        FocusManager.instance.primaryFocus?.unfocus();
         onPressed();
       },
       child: CrunchText(

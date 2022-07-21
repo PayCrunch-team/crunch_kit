@@ -24,6 +24,7 @@ class CrunchIconButton extends StatelessWidget {
         borderRadius: CrunchDimensions.circleBorderRadius,
         onTap: () async {
           await HapticFeedback.mediumImpact();
+          FocusManager.instance.primaryFocus?.unfocus();
           onPressed();
         },
         child: Column(
