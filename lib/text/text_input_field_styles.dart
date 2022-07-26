@@ -33,6 +33,8 @@ class CrunchInputField extends StatelessWidget {
         borderRadius: CrunchDimensions.roundBorderRadius,
       ),
       child: TextFormField(
+        autocorrect: false,
+        enableSuggestions: false,
         decoration: InputDecoration(
           enabledBorder: CrunchTextFieldStyles.enabledBorder,
           focusedBorder: CrunchTextFieldStyles.focusedBorder,
