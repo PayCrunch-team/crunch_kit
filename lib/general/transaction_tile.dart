@@ -6,6 +6,7 @@ class CrunchTransactionTile extends StatelessWidget {
   final Widget headerIcon;
   final String title;
   final String subtitle;
+  final Widget statusIcon;
   final String amount;
   final Function() onTap;
 
@@ -16,6 +17,7 @@ class CrunchTransactionTile extends StatelessWidget {
     required this.subtitle,
     required this.amount,
     required this.onTap,
+    required this.statusIcon,
   }) : super(key: key);
 
   @override
@@ -48,7 +50,7 @@ class CrunchTransactionTile extends StatelessWidget {
                         style: CrunchTextStyles.tileTitleBlack,
                       ),
                       Icon(
-                        Icons.info_outline,
+                        Icons.copy_outlined,
                         size: 14.sp,
                         color: CrunchColors.grey,
                       )
@@ -60,9 +62,15 @@ class CrunchTransactionTile extends StatelessWidget {
                   ),
                   const Divider(),
                   Expanded(child: Container()),
-                  CrunchText(
-                    amount,
-                    style: CrunchTextStyles.titleGrey,
+                  Row(
+                    children: [
+                      CrunchText(
+                        amount,
+                        style: CrunchTextStyles.titleBlack,
+                      ),
+                      SizedBox(width: 2.w),
+                      statusIcon,
+                    ],
                   ),
                 ],
               ),
