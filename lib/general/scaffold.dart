@@ -44,7 +44,7 @@ class CrunchScaffold extends StatelessWidget {
           backgroundColor: CrunchColors.almostWhite,
           floatingActionButton: floatingCenterButton,
           floatingActionButtonLocation: floatingCenterButton != null
-              ? FloatingActionButtonLocation.centerDocked
+              ? FloatingActionButtonLocation.centerFloat
               : null,
           appBar: disableAppBar
               ? null
