@@ -27,7 +27,7 @@ class CrunchTransactionTile extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 1.h),
         padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 4.w),
-        height: 14.h,
+        height: 16.h,
         decoration: BoxDecoration(
           color: CrunchColors.superLightWhite,
           borderRadius: CrunchDimensions.roundBorderRadius,
