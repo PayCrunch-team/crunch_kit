@@ -73,12 +73,7 @@ class CrunchScaffold extends StatelessWidget {
                           ]
                         : null,
                   ),
-          body: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: CrunchDimensions.horizontalPadding,
-            ),
-            child: body,
-          ),
+          body: body,
           bottomNavigationBar: bottomNavigationBar,
         ),
         Visibility(

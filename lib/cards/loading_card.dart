@@ -15,16 +15,21 @@ class CrunchLoadingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Shimmer.fromColors(
-      baseColor: CrunchColors.superLightWhite,
-      highlightColor: CrunchColors.silver,
-      period: const Duration(seconds: 2),
-      child: Container(
-        height: height,
-        width: width ?? 100.w - (CrunchDimensions.horizontalPadding * 2),
-        decoration: BoxDecoration(
-          color: CrunchColors.superLightWhite,
-          borderRadius: CrunchDimensions.roundBorderRadius,
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: CrunchDimensions.horizontalPadding,
+      ),
+      child: Shimmer.fromColors(
+        baseColor: CrunchColors.superLightWhite,
+        highlightColor: CrunchColors.silver,
+        period: const Duration(seconds: 2),
+        child: Container(
+          height: height,
+          width: width ?? 100.w - (CrunchDimensions.horizontalPadding * 2),
+          decoration: BoxDecoration(
+            color: CrunchColors.superLightWhite,
+            borderRadius: CrunchDimensions.roundBorderRadius,
+          ),
         ),
       ),
     );
