@@ -34,7 +34,8 @@ class CrunchNeumorphicCard extends StatelessWidget {
         child: Neumorphic(
           style: NeumorphicStyle(
             color: color ?? CrunchColors.almostWhite,
-            shape: NeumorphicShape.flat,
+            shape:
+                color == null ? NeumorphicShape.flat : NeumorphicShape.convex,
             lightSource: LightSource.top,
             boxShape: NeumorphicBoxShape.roundRect(
               CrunchDimensions.roundBorderRadius,
