@@ -24,4 +24,5 @@ class CrunchColors {
   static var superLightRed = const Color(0xFFFA5A5A).withOpacity(0.15);
   static const superDarkRed = Color(0xFFC62828);
   static const infoYello = Color(0xFFFFC107);
+  static const teal = Color(0xff00796b);
 }
