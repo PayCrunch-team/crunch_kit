@@ -8,20 +8,22 @@ class CrunchInputField extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final String hintText;
-  final String? Function(String?) validator;
+  final String? Function(String?)? validator;
   final TextEditingController controller;
   final bool obscureText;
   final TextInputType textInputType;
+  final FocusNode? focusNode;
 
   const CrunchInputField({
     Key? key,
     this.prefixIcon,
     this.suffixIcon,
+    this.validator,
     required this.hintText,
-    required this.validator,
     required this.controller,
     this.obscureText = false,
     this.textInputType = TextInputType.emailAddress,
+    this.focusNode,
   }) : super(key: key);
 
   @override
@@ -46,6 +48,7 @@ class CrunchInputField extends StatelessWidget {
         validator: validator,
         controller: controller,
         obscureText: obscureText,
+        focusNode: focusNode,
       ),
     );
   }
