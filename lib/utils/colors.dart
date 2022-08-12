@@ -6,6 +6,8 @@ class CrunchColors {
   static const lightBlue = Color(0xff56a5fa);
   static const darkBlue = Color(0xff0150C5);
   static const goldCoin = Color(0xffffd700);
+  static const moneyGreen = Color(0xff50c05a);
+
   static const accentPurple = Color(0xffba68c8);
   static const accentPink = Color(0xfff06292);
   static const accentOrange = Color(0xffff8a65);
@@ -24,5 +26,4 @@ class CrunchColors {
   static var superLightRed = const Color(0xFFFA5A5A).withOpacity(0.15);
   static const superDarkRed = Color(0xFFC62828);
   static const infoYello = Color(0xFFFFC107);
-  static const teal = Color(0xff00796b);
 }

@@ -7,6 +7,7 @@ class CrunchNeumorphicCard extends StatelessWidget {
   final double? width;
   final Widget? child;
   final Color? color;
+  final EdgeInsetsGeometry? padding;
   final GestureTapCallback? onPressed;
 
   const CrunchNeumorphicCard({
@@ -15,6 +16,7 @@ class CrunchNeumorphicCard extends StatelessWidget {
     this.width,
     this.child,
     this.color,
+    this.padding,
     this.onPressed,
   }) : super(key: key);
 
@@ -42,7 +44,8 @@ class CrunchNeumorphicCard extends StatelessWidget {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.all(CrunchDimensions.horizontalPadding),
+            padding:
+                padding ?? EdgeInsets.all(CrunchDimensions.horizontalPadding),
             child: child,
           ),
         ),
