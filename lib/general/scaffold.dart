@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -78,16 +76,12 @@ class CrunchScaffold extends StatelessWidget {
         ),
         Visibility(
           visible: showOverlay,
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-            child: Container(
-              color: CrunchColors.darkGrey.withOpacity(0.4),
-              child: Center(
-                child: Lottie.asset(
-                  overlayAssetPath ?? 'assets/lottie/loading.json',
-                  height: 24.w,
-                  width: 24.w,
-                ),
+          child: CrunchBlur(
+            child: Center(
+              child: Lottie.asset(
+                overlayAssetPath ?? 'assets/lottie/loading.json',
+                height: 24.w,
+                width: 24.w,
               ),
             ),
           ),
