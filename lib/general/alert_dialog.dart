@@ -1,17 +1,21 @@
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lottie/lottie.dart';
+import 'package:sizer/sizer.dart';
 
 class CrunchAlertDialog extends StatelessWidget {
   final String? title;
   final String? content;
   final List<Widget>? actions;
+  final String? lottiePath;
 
   const CrunchAlertDialog({
     Key? key,
     this.title,
     this.content,
     this.actions,
+    this.lottiePath,
   }) : super(key: key);
 
   @override
@@ -25,6 +29,15 @@ class CrunchAlertDialog extends StatelessWidget {
             Navigator.pop(context);
           },
           child: const CrunchBlur(),
+        ),
+        Visibility(
+          visible: lottiePath != null,
+          child: Lottie.asset(
+            lottiePath!,
+            height: 100.h,
+            width: 100.w,
+            repeat: false,
+          ),
         ),
         AlertDialog(
           title: title != null
