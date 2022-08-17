@@ -28,15 +28,20 @@ class CrunchAlertDialog extends StatelessWidget {
             await HapticFeedback.mediumImpact();
             Navigator.pop(context);
           },
-          child: const CrunchBlur(),
-        ),
-        Visibility(
-          visible: lottiePath != null,
-          child: Lottie.asset(
-            lottiePath!,
-            height: 100.h,
-            width: 100.w,
-            repeat: false,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              const CrunchBlur(),
+              Visibility(
+                visible: lottiePath != null,
+                child: Lottie.asset(
+                  lottiePath ?? '',
+                  height: 100.h,
+                  width: 100.w,
+                  repeat: false,
+                ),
+              ),
+            ],
           ),
         ),
         AlertDialog(
