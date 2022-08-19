@@ -13,6 +13,7 @@ class CrunchText extends StatelessWidget {
     Key? key,
     this.style,
     this.maxLines,
+    this.align,
   }) : super(key: key);
 
   @override
