@@ -6,6 +6,7 @@ class CrunchText extends StatelessWidget {
   final String text;
   final TextStyle? style;
   final int? maxLines;
+  final TextAlign? align;
 
   const CrunchText(
     this.text, {
@@ -21,6 +22,7 @@ class CrunchText extends StatelessWidget {
       style: style,
       maxLines: maxLines ?? 3,
       overflow: TextOverflow.ellipsis,
+      textAlign: align,
     );
   }
 }
