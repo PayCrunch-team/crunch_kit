@@ -17,3 +17,4 @@ doc/api/
 
 # IntelliJ
 .idea/
+.DS_Store
