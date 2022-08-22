@@ -77,16 +77,18 @@ class CrunchTextStyles {
     fontWeight: FontWeight.w500,
   );
 
-  static final headingWhite1 = TextStyle(
+  static final headingWhite = TextStyle(
     color: CrunchColors.almostWhite,
-    fontSize: 28.sp,
-    fontWeight: FontWeight.w800,
+    fontFamily: 'MonumentExtended',
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w500,
   );
 
-  static final headingBlack1 = TextStyle(
+  static final headingBlack = TextStyle(
     color: CrunchColors.almostBlack,
-    fontSize: 28.sp,
-    fontWeight: FontWeight.w800,
+    fontFamily: 'MonumentExtended',
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w500,
   );
 
   static final primaryButton = TextStyle(
