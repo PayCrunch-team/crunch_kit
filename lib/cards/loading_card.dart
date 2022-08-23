@@ -20,7 +20,7 @@ class CrunchLoadingCard extends StatelessWidget {
         horizontal: CrunchDimensions.horizontalPadding,
       ),
       child: Shimmer.fromColors(
-        baseColor: CrunchColors.superLightWhite,
+        baseColor: CrunchColors.almostWhite,
         highlightColor: CrunchColors.silver,
         period: const Duration(seconds: 2),
         child: Container(
