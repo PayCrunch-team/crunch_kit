@@ -39,7 +39,7 @@ class CrunchScaffold extends StatelessWidget {
       children: [
         Scaffold(
           resizeToAvoidBottomInset: resizeToAvoidBottomInsets,
-          backgroundColor: CrunchColors.almostWhite,
+          backgroundColor: CrunchColors.superLightWhite,
           floatingActionButton: floatingCenterButton,
           floatingActionButtonLocation: floatingCenterButton != null
               ? FloatingActionButtonLocation.centerFloat
@@ -57,7 +57,7 @@ class CrunchScaffold extends StatelessWidget {
                     leading: disableBack ? null : const CrunchBackButton(),
                     centerTitle: true,
                     elevation: 0.0,
-                    backgroundColor: CrunchColors.almostWhite,
+                    backgroundColor: CrunchColors.superLightWhite,
                     actions: showLogoutButton
                         ? [
                             IconButton(
