@@ -17,7 +17,7 @@ class CrunchBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0.0,
-      color: CrunchColors.almostWhite,
+      color: CrunchColors.superLightWhite,
       shape: RoundedRectangleBorder(
         borderRadius: CrunchDimensions.circleBorderRadius,
       ),

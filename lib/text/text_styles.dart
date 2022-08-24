@@ -79,12 +79,24 @@ class CrunchTextStyles {
 
   static final headingWhite = TextStyle(
     color: CrunchColors.almostWhite,
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w800,
+  );
+
+  static final headingBlack = TextStyle(
+    color: CrunchColors.almostBlack,
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w800,
+  );
+
+  static final headingExtendedWhite = TextStyle(
+    color: CrunchColors.almostWhite,
     fontFamily: 'MonumentExtended',
     fontSize: 26.sp,
     fontWeight: FontWeight.w500,
   );
 
-  static final headingBlack = TextStyle(
+  static final headingExtendedBlack = TextStyle(
     color: CrunchColors.almostBlack,
     fontFamily: 'MonumentExtended',
     fontSize: 26.sp,
