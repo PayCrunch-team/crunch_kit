@@ -7,64 +7,54 @@ import 'package:sizer/sizer.dart';
 class CrunchErrorCard extends StatelessWidget {
   final String? title;
   final String? details;
-  final double? height;
   final double? width;
 
   const CrunchErrorCard({
     Key? key,
     this.title,
     this.details,
-    this.height,
     this.width,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
+    return Container(
+      width: width,
+      margin: EdgeInsets.symmetric(
+        vertical: CrunchDimensions.verticalPadding,
         horizontal: CrunchDimensions.horizontalPadding,
       ),
-      child: Card(
-        elevation: 0.0,
+      padding: EdgeInsets.all(CrunchDimensions.horizontalPadding),
+      decoration: BoxDecoration(
         color: CrunchColors.superLightRed,
-        margin: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(
-          borderRadius: CrunchDimensions.roundBorderRadius,
-        ),
-        child: SizedBox(
-          height: height,
-          width: width,
-          child: Padding(
-            padding: EdgeInsets.all(CrunchDimensions.horizontalPadding),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.error_outline_outlined,
-                      color: CrunchColors.superDarkRed,
-                      size: 16.sp,
-                    ),
-                    SizedBox(width: 2.w),
-                    CrunchText(
-                      title ?? 'Ah shit, here we go again...🤦🏻‍♂️',
-                      style: CrunchTextStyles.tileTitleBlack,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 1.h),
-                CrunchText(
-                  details ??
-                      'There was a fuck up from our end and our best minds are on it. Hang on!',
-                  style: CrunchTextStyles.subTitleRed,
-                  maxLines: 7,
-                ),
-              ],
-            ),
+        borderRadius: CrunchDimensions.roundBorderRadius,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                Icons.error_outline_outlined,
+                color: CrunchColors.superDarkRed,
+                size: 16.sp,
+              ),
+              SizedBox(width: 2.w),
+              CrunchText(
+                title ?? 'Ah shit, here we go again...🤦🏻‍♂️',
+                style: CrunchTextStyles.tileTitleBlack,
+              ),
+            ],
           ),
-        ),
+          SizedBox(height: 1.h),
+          CrunchText(
+            details ??
+                'There was a fuck up from our end and our best minds are on it. Hang tight!',
+            style: CrunchTextStyles.subTitleRed,
+            maxLines: 5,
+          ),
+        ],
       ),
     );
   }
