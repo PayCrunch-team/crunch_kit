@@ -46,11 +46,9 @@ class CrunchAlertDialog extends StatelessWidget {
         ),
         AlertDialog(
           title: title != null
-              ? Center(
-                  child: CrunchText(
-                    title!,
-                    style: CrunchTextStyles.titleBlack,
-                  ),
+              ? CrunchText(
+                  title!,
+                  style: CrunchTextStyles.titleBlack,
                 )
               : null,
           content: content != null
