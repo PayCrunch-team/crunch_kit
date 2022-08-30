@@ -13,6 +13,7 @@ class CrunchInputField extends StatelessWidget {
   final bool obscureText;
   final TextInputType textInputType;
   final FocusNode? focusNode;
+  final Color? backgroundColor;
 
   const CrunchInputField({
     Key? key,
@@ -24,6 +25,7 @@ class CrunchInputField extends StatelessWidget {
     this.obscureText = false,
     this.textInputType = TextInputType.emailAddress,
     this.focusNode,
+    this.backgroundColor,
   }) : super(key: key);
 
   @override
@@ -31,7 +33,7 @@ class CrunchInputField extends StatelessWidget {
     return Container(
       alignment: Alignment.bottomCenter,
       decoration: BoxDecoration(
-        color: CrunchColors.superLightGrey,
+        color: backgroundColor ?? CrunchColors.superLightGrey,
         borderRadius: CrunchDimensions.roundBorderRadius,
       ),
       child: TextFormField(
