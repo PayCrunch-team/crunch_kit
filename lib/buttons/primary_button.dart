@@ -6,11 +6,13 @@ import 'package:sizer/sizer.dart';
 class CrunchPrimaryButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
+  final Color? color;
 
   const CrunchPrimaryButton({
     Key? key,
     required this.onPressed,
     required this.text,
+    this.color,
   }) : super(key: key);
 
   @override
@@ -21,7 +23,7 @@ class CrunchPrimaryButton extends StatelessWidget {
       child: NeumorphicButton(
         provideHapticFeedback: false,
         style: NeumorphicStyle(
-          color: CrunchColors.payCrunchBlue,
+          color: color ?? CrunchColors.payCrunchBlue,
           shape: NeumorphicShape.convex,
           boxShape: NeumorphicBoxShape.roundRect(
             CrunchDimensions.circleBorderRadius,
