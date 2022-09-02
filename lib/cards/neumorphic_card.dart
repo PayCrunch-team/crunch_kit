@@ -9,6 +9,7 @@ class CrunchNeumorphicCard extends StatelessWidget {
   final Color? color;
   final EdgeInsetsGeometry? padding;
   final GestureTapCallback? onPressed;
+  final bool isEnabled;
 
   const CrunchNeumorphicCard({
     Key? key,
@@ -18,6 +19,7 @@ class CrunchNeumorphicCard extends StatelessWidget {
     this.color,
     this.padding,
     this.onPressed,
+    this.isEnabled = true,
   }) : super(key: key);
 
   @override
@@ -35,6 +37,7 @@ class CrunchNeumorphicCard extends StatelessWidget {
         width: width,
         child: Neumorphic(
           style: NeumorphicStyle(
+            depth: isEnabled ? null : 0,
             color: color ?? CrunchColors.almostWhite,
             shape:
                 color == null ? NeumorphicShape.flat : NeumorphicShape.convex,
