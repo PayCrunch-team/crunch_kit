@@ -15,7 +15,7 @@ class CrunchColors {
   static const accentOrange = Color(0xffff8a65);
 
   static const almostWhite = Color(0xfffafafa);
-  static const superLightWhite = Color(0xfff3f3f3);
+  static const superLightWhite = Color(0xfff5f5f5);
   static const superLightGrey = Color(0xffeeeeee);
   static const silver = Color(0xffc0c0c0);
   static const grey = Color(0xff8c8c8c);
