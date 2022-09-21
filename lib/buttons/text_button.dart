@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CrunchTextButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String text;
   const CrunchTextButton({
     Key? key,
@@ -14,14 +14,18 @@ class CrunchTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () async {
-        await HapticFeedback.mediumImpact();
-        FocusManager.instance.primaryFocus?.unfocus();
-        onPressed();
-      },
+      onPressed: onPressed == null
+          ? null
+          : () async {
+              await HapticFeedback.mediumImpact();
+              FocusManager.instance.primaryFocus?.unfocus();
+              onPressed!();
+            },
       child: CrunchText(
         text,
-        style: CrunchTextStyles.secondaryButton,
+        style: CrunchTextStyles.secondaryButton.copyWith(
+          color: onPressed == null ? CrunchColors.grey : null,
+        ),
       ),
     );
   }
