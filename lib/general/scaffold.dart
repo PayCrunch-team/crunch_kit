@@ -16,6 +16,7 @@ class CrunchScaffold extends StatelessWidget {
   final CrunchFloatingCenterButton? floatingCenterButton;
   final bool? resizeToAvoidBottomInsets;
   final String? overlayAssetPath;
+  final Widget? kycBar;
 
   const CrunchScaffold({
     Key? key,
@@ -31,6 +32,7 @@ class CrunchScaffold extends StatelessWidget {
     this.floatingCenterButton,
     this.overlayAssetPath,
     this.resizeToAvoidBottomInsets = true,
+    this.kycBar,
   }) : super(key: key);
 
   @override
@@ -71,7 +73,17 @@ class CrunchScaffold extends StatelessWidget {
                           ]
                         : null,
                   ),
-          body: body,
+          body: body != null
+              ? kycBar != null
+                  ? Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        kycBar!,
+                        Expanded(child: body!),
+                      ],
+                    )
+                  : body
+              : null,
           bottomNavigationBar: bottomNavigationBar,
         ),
         Visibility(
