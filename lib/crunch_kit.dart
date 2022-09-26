@@ -7,6 +7,7 @@ export 'buttons/primary_button.dart';
 export 'buttons/secondary_button.dart';
 export 'buttons/social_button.dart';
 export 'buttons/text_button.dart';
+export 'cards/carousel_card.dart';
 export 'cards/error_card.dart';
 export 'cards/filter_chip_card.dart';
 export 'cards/loading_card.dart';

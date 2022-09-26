@@ -9,7 +9,10 @@ class CrunchColors {
   static const goldCoin = Color(0xffffd700);
   static const greenMoney = Color(0xff00da73);
   static const referralPurple = Color(0xff6200ea);
+  static const dimeRed = Color(0xffd50000);
 
+  static const accentYellow = Color(0xffffab00);
+  static const accentGreen = Color(0xff00bfa5);
   static const accentPurple = Color(0xffba68c8);
   static const accentPink = Color(0xfff06292);
   static const accentOrange = Color(0xffff8a65);
