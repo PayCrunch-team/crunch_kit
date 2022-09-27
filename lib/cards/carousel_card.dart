@@ -9,6 +9,8 @@ class CrunchCarouselCard extends StatelessWidget {
   final Color baseColor;
   final Color highlightColor;
   final Widget? image;
+  final Widget? overlay;
+  final EdgeInsetsGeometry? padding;
   final GestureTapCallback? onPressed;
 
   const CrunchCarouselCard({
@@ -18,6 +20,8 @@ class CrunchCarouselCard extends StatelessWidget {
     required this.baseColor,
     required this.highlightColor,
     this.image,
+    this.overlay,
+    this.padding,
     this.onPressed,
   }) : super(key: key);
 
@@ -33,7 +37,7 @@ class CrunchCarouselCard extends StatelessWidget {
           : null,
       child: Container(
         width: 100.w,
-        padding: EdgeInsets.all(CrunchDimensions.horizontalPadding),
+        padding: padding ?? EdgeInsets.all(CrunchDimensions.horizontalPadding),
         margin: EdgeInsets.symmetric(
           horizontal: CrunchDimensions.horizontalPadding / 2,
         ),
@@ -45,17 +49,22 @@ class CrunchCarouselCard extends StatelessWidget {
             colors: [baseColor, highlightColor],
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
           children: [
-            image ?? Container(),
-            CrunchText(title, style: CrunchTextStyles.titleWhite),
-            CrunchText(
-              details,
-              style: CrunchTextStyles.subTitleWhite,
-              maxLines: 7,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                image ?? Container(),
+                CrunchText(title, style: CrunchTextStyles.titleWhite),
+                CrunchText(
+                  details,
+                  style: CrunchTextStyles.subTitleWhite,
+                  maxLines: 7,
+                ),
+              ],
             ),
+            overlay ?? Container(),
           ],
         ),
       ),
