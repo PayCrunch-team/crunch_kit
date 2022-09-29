@@ -6,22 +6,20 @@ import 'package:sizer/sizer.dart';
 class CrunchCarouselCard extends StatelessWidget {
   final String title;
   final String details;
-  final Color baseColor;
-  final Color highlightColor;
+  final Color color;
+  final Color? textColor;
   final Widget? image;
   final Widget? overlay;
-  final EdgeInsetsGeometry? padding;
   final GestureTapCallback? onPressed;
 
   const CrunchCarouselCard({
     Key? key,
     required this.title,
     required this.details,
-    required this.baseColor,
-    required this.highlightColor,
+    required this.color,
+    this.textColor,
     this.image,
     this.overlay,
-    this.padding,
     this.onPressed,
   }) : super(key: key);
 
@@ -37,32 +35,33 @@ class CrunchCarouselCard extends StatelessWidget {
           : null,
       child: Container(
         width: 100.w,
-        padding: padding ?? EdgeInsets.all(CrunchDimensions.horizontalPadding),
         margin: EdgeInsets.symmetric(
-          horizontal: CrunchDimensions.horizontalPadding / 2,
+          horizontal: CrunchDimensions.horizontalPadding / 3,
         ),
         decoration: BoxDecoration(
+          color: color,
           borderRadius: CrunchDimensions.roundBorderRadius,
-          gradient: LinearGradient(
-            begin: Alignment.bottomLeft,
-            end: Alignment.topRight,
-            colors: [baseColor, highlightColor],
-          ),
         ),
         child: Stack(
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                image ?? Container(),
-                CrunchText(title, style: CrunchTextStyles.titleWhite),
-                CrunchText(
-                  details,
-                  style: CrunchTextStyles.subTitleWhite,
-                  maxLines: 7,
-                ),
-              ],
+            Padding(
+              padding: EdgeInsets.all(CrunchDimensions.horizontalPadding),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  image ?? Container(),
+                  CrunchText(
+                    title,
+                    style:
+                        CrunchTextStyles.titleBlack.copyWith(color: textColor),
+                  ),
+                  CrunchText(
+                    details,
+                    style: CrunchTextStyles.subTitleGrey,
+                  ),
+                ],
+              ),
             ),
             overlay ?? Container(),
           ],

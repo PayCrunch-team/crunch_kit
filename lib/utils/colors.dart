@@ -10,12 +10,18 @@ class CrunchColors {
   static const greenMoney = Color(0xff00da73);
   static const referralPurple = Color(0xff6200ea);
   static const dimeRed = Color(0xffd50000);
+  static const shitBrown = Color(0xff795548);
 
   static const accentYellow = Color(0xffffab00);
   static const accentGreen = Color(0xff00bfa5);
   static const accentPurple = Color(0xffba68c8);
   static const accentPink = Color(0xfff06292);
   static const accentOrange = Color(0xffff8a65);
+
+  static const superLightYellow = Color(0xfffff0d4);
+  static const superLightGreen = Color(0xffe6f9f2);
+  static const superLightPurple = Color(0xfff8eeff);
+  static const superLightOrange = Color(0xffffe6dd);
 
   static const almostWhite = Color(0xfffafafa);
   static const superLightWhite = Color(0xfff5f5f5);
