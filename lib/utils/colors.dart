@@ -11,6 +11,7 @@ class CrunchColors {
   static const referralPurple = Color(0xff6200ea);
   static const dimeRed = Color(0xffd50000);
   static const shitBrown = Color(0xff795548);
+  static const iceCyan = Color(0xff18ffff);
 
   static const accentYellow = Color(0xffffab00);
   static const accentGreen = Color(0xff00bfa5);

@@ -77,6 +77,12 @@ class CrunchTextStyles {
     fontWeight: FontWeight.w500,
   );
 
+  static final subTitleSilver = TextStyle(
+    color: CrunchColors.silver,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+  );
+
   static final subHeadingGrey = TextStyle(
     color: CrunchColors.darkGrey,
     fontSize: 10.sp,

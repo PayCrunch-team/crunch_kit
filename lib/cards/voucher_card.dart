@@ -77,7 +77,7 @@ class CrunchVoucherCard extends StatelessWidget {
                 ),
                 SizedBox(height: 2.h),
                 CrunchText(
-                  'Up to',
+                  'Up to'.toUpperCase(),
                   style: CrunchTextStyles.subTitleWhite,
                 ),
                 CrunchText(desc, style: CrunchTextStyles.titleWhite),
@@ -93,16 +93,18 @@ class CrunchVoucherCard extends StatelessWidget {
               height: 4.h,
               decoration: BoxDecoration(
                 color: CrunchColors.black,
-                borderRadius: CrunchDimensions.circleBorderRadius,
+                borderRadius: CrunchDimensions.roundBorderRadius / 2,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CrunchText(
-                    'claim now',
-                    style: CrunchTextStyles.tileTitleBlack.copyWith(
-                      color: CrunchColors.almostWhite,
-                      fontSize: 12.sp,
+                  CrunchShimmerText(
+                    highlightColor: CrunchColors.grey,
+                    child: CrunchText(
+                      'Claim now'.toUpperCase(),
+                      style: CrunchTextStyles.titleWhite.copyWith(
+                        fontSize: 8.sp,
+                      ),
                     ),
                   ),
                   SizedBox(width: 1.w),
@@ -119,7 +121,7 @@ class CrunchVoucherCard extends StatelessWidget {
             top: 1.5.h,
             right: 2.w,
             child: Image.asset(
-              'assets/graphics/stars.png',
+              'assets/illustrations/stars.png',
               width: 25.w,
             ),
           ),
