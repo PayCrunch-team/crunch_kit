@@ -31,7 +31,6 @@ class CrunchColors {
   static const darkGrey = Color(0xFF616161);
   static const superDarkGrey = Color(0xff333431);
   static const almostBlack = Color(0xff212121);
-  static const black = Color(0xff111111);
 
   static const errorRed = Color(0xfffa5a5a);
   static const successGreen = Color(0xFF43A047);

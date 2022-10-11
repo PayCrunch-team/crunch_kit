@@ -17,7 +17,6 @@ class CrunchScaffold extends StatelessWidget {
   final bool? resizeToAvoidBottomInsets;
   final String? overlayAssetPath;
   final Widget? kycBar;
-  final bool isDark;
 
   const CrunchScaffold({
     Key? key,
@@ -34,7 +33,6 @@ class CrunchScaffold extends StatelessWidget {
     this.overlayAssetPath,
     this.resizeToAvoidBottomInsets = true,
     this.kycBar,
-    this.isDark = false,
   }) : super(key: key);
 
   @override
@@ -43,8 +41,7 @@ class CrunchScaffold extends StatelessWidget {
       children: [
         Scaffold(
           resizeToAvoidBottomInset: resizeToAvoidBottomInsets,
-          backgroundColor:
-              isDark ? CrunchColors.almostBlack : CrunchColors.superLightWhite,
+          backgroundColor: CrunchColors.superLightWhite,
           floatingActionButton: floatingCenterButton,
           floatingActionButtonLocation: floatingCenterButton != null
               ? FloatingActionButtonLocation.centerFloat
@@ -56,17 +53,13 @@ class CrunchScaffold extends StatelessWidget {
                     title: title != null
                         ? Text(
                             title!,
-                            style: isDark
-                                ? CrunchTextStyles.titleWhite
-                                : CrunchTextStyles.titleBlack,
+                            style: CrunchTextStyles.titleBlack,
                           )
                         : null,
                     leading: disableBack ? null : const CrunchBackButton(),
                     centerTitle: true,
                     elevation: 0.0,
-                    backgroundColor: isDark
-                        ? CrunchColors.almostBlack
-                        : CrunchColors.superLightWhite,
+                    backgroundColor: CrunchColors.superLightWhite,
                     actions: showLogoutButton
                         ? [
                             IconButton(

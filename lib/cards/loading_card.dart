@@ -7,14 +7,12 @@ class CrunchLoadingCard extends StatelessWidget {
   final double? height;
   final double? width;
   final EdgeInsetsGeometry? padding;
-  final bool isDark;
 
   const CrunchLoadingCard({
     Key? key,
     this.height,
     this.width,
     this.padding,
-    this.isDark = false,
   }) : super(key: key);
 
   @override
@@ -22,15 +20,14 @@ class CrunchLoadingCard extends StatelessWidget {
     return Padding(
       padding: padding ?? EdgeInsets.zero,
       child: Shimmer.fromColors(
-        baseColor:
-            isDark ? CrunchColors.superDarkGrey : CrunchColors.almostWhite,
-        highlightColor: isDark ? CrunchColors.almostBlack : CrunchColors.silver,
+        baseColor: CrunchColors.almostWhite,
+        highlightColor: CrunchColors.silver,
         period: const Duration(seconds: 2),
         child: Container(
           height: height ?? 20.h,
           width: width ?? 100.w - (CrunchDimensions.horizontalPadding * 2),
           decoration: BoxDecoration(
-            color: isDark ? CrunchColors.almostBlack : CrunchColors.almostWhite,
+            color: CrunchColors.almostWhite,
             borderRadius: CrunchDimensions.roundBorderRadius,
           ),
         ),

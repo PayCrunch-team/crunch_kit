@@ -10,7 +10,6 @@ class CrunchNeumorphicCard extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final GestureTapCallback? onPressed;
   final bool isEnabled;
-  final bool isDark;
 
   const CrunchNeumorphicCard({
     Key? key,
@@ -21,7 +20,6 @@ class CrunchNeumorphicCard extends StatelessWidget {
     this.padding,
     this.onPressed,
     this.isEnabled = true,
-    this.isDark = false,
   }) : super(key: key);
 
   @override
@@ -47,7 +45,6 @@ class CrunchNeumorphicCard extends StatelessWidget {
             boxShape: NeumorphicBoxShape.roundRect(
               CrunchDimensions.roundBorderRadius,
             ),
-            shadowLightColor: isDark ? CrunchColors.almostBlack : null,
           ),
           child: Padding(
             padding:
