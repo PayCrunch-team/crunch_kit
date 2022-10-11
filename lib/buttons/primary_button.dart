@@ -9,7 +9,6 @@ class CrunchPrimaryButton extends StatelessWidget {
   final Color? backgroundColor;
   final Color? textColor;
   final Color? highlightColor;
-  final bool isDark;
 
   const CrunchPrimaryButton({
     Key? key,
@@ -18,7 +17,6 @@ class CrunchPrimaryButton extends StatelessWidget {
     this.highlightColor,
     this.backgroundColor,
     this.textColor,
-    this.isDark = false,
   }) : super(key: key);
 
   @override
@@ -30,7 +28,6 @@ class CrunchPrimaryButton extends StatelessWidget {
         provideHapticFeedback: false,
         style: NeumorphicStyle(
           color: backgroundColor ?? CrunchColors.payCrunchBlue,
-          shadowLightColor: isDark ? CrunchColors.almostBlack : null,
           shape: NeumorphicShape.convex,
           boxShape: NeumorphicBoxShape.roundRect(
             CrunchDimensions.circleBorderRadius,
