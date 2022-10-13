@@ -1,7 +1,6 @@
 import 'package:crunch_kit/crunch_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sizer/sizer.dart';
 
 class CrunchCarouselCard extends StatelessWidget {
   final String title;
@@ -25,23 +24,15 @@ class CrunchCarouselCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed != null
-          ? () async {
-              await HapticFeedback.mediumImpact();
-              FocusManager.instance.primaryFocus?.unfocus();
-              onPressed!();
-            }
-          : null,
-      child: Container(
-        width: 100.w,
-        margin: EdgeInsets.symmetric(
-          horizontal: CrunchDimensions.horizontalPadding / 3,
-        ),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: CrunchDimensions.roundBorderRadius,
-        ),
+    return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: CrunchDimensions.verticalPadding,
+        horizontal: CrunchDimensions.horizontalPadding / 3,
+      ),
+      child: CrunchNeumorphicCard(
+        color: color,
+        padding: EdgeInsets.zero,
+        onPressed: onPressed,
         child: Stack(
           children: [
             Padding(
