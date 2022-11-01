@@ -23,6 +23,7 @@ class CrunchColors {
   static const superLightGreen = Color(0xffddf5de);
   static const superLightPurple = Color(0xfff8eaff);
   static const superLightOrange = Color(0xffffe6dd);
+  static const superLightCyan = Color(0xffe0ffff);
 
   static const almostWhite = Color(0xfffafafa);
   static const superLightWhite = Color(0xfff5f5f5);
