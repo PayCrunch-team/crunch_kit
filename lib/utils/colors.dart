@@ -12,6 +12,7 @@ class CrunchColors {
   static const dimeRed = Color(0xffd50000);
   static const shitBrown = Color(0xff795548);
   static const iceCyan = Color(0xff18ffff);
+  static const darkCyan = Color(0xff033333);
 
   static const accentYellow = Color(0xffffab00);
   static const accentGreen = Color(0xff00bfa5);
