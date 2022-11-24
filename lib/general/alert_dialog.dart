@@ -7,6 +7,8 @@ import 'package:sizer/sizer.dart';
 class CrunchAlertDialog extends StatelessWidget {
   final String? title;
   final String? content;
+  final Widget? child;
+  final Color? backgroundColor;
   final List<Widget>? actions;
   final String? lottiePath;
 
@@ -14,6 +16,8 @@ class CrunchAlertDialog extends StatelessWidget {
     Key? key,
     this.title,
     this.content,
+    this.child,
+    this.backgroundColor,
     this.actions,
     this.lottiePath,
   }) : super(key: key);
@@ -26,7 +30,7 @@ class CrunchAlertDialog extends StatelessWidget {
         GestureDetector(
           onTap: () async {
             await HapticFeedback.mediumImpact();
-            Navigator.pop(context);
+            Navigator.maybePop(context);
           },
           child: Stack(
             alignment: Alignment.center,
@@ -57,9 +61,10 @@ class CrunchAlertDialog extends StatelessWidget {
                   style: CrunchTextStyles.subTitleGrey,
                   maxLines: 8,
                 )
-              : null,
+              : child,
           actions: actions,
           elevation: 0.0,
+          backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: CrunchDimensions.roundBorderRadius,
           ),
