@@ -17,6 +17,7 @@ class CrunchScaffold extends StatelessWidget {
   final bool? resizeToAvoidBottomInsets;
   final String? overlayAssetPath;
   final Widget? kycBar;
+  final bool isUserUnverified;
 
   const CrunchScaffold({
     Key? key,
@@ -33,6 +34,7 @@ class CrunchScaffold extends StatelessWidget {
     this.overlayAssetPath,
     this.resizeToAvoidBottomInsets = true,
     this.kycBar,
+    this.isUserUnverified = false,
   }) : super(key: key);
 
   @override
@@ -96,6 +98,14 @@ class CrunchScaffold extends StatelessWidget {
                 width: 24.w,
               ),
             ),
+          ),
+        ),
+        Visibility(
+          visible: isUserUnverified,
+          child: Container(
+            color: CrunchColors.almostBlack.withOpacity(0.6),
+            height: double.infinity,
+            width: double.infinity,
           ),
         ),
       ],

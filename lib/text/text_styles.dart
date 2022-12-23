@@ -35,6 +35,12 @@ class CrunchTextStyles {
     fontWeight: FontWeight.w600,
   );
 
+  static final tileTitleWhite = TextStyle(
+    color: CrunchColors.almostWhite,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+  );
+
   static final titleBlack = TextStyle(
     color: CrunchColors.almostBlack,
     fontSize: 16.sp,
@@ -123,6 +129,12 @@ class CrunchTextStyles {
 
   static final secondaryButton = TextStyle(
     color: CrunchColors.payCrunchBlue,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final secondaryButtonBlack = TextStyle(
+    color: CrunchColors.almostBlack,
     fontSize: 12.sp,
     fontWeight: FontWeight.w600,
   );
