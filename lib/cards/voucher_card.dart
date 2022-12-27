@@ -42,13 +42,13 @@ class CrunchVoucherCard extends StatelessWidget {
             }
           : null,
       child: Container(
-        width: 42.w,
-        height: 36.h,
+        width: 39.w,
+        height: 37.h,
         padding: EdgeInsets.fromLTRB(
             CrunchDimensions.horizontalPadding / 2,
             CrunchDimensions.verticalPadding / 2,
             0,
-            CrunchDimensions.verticalPadding / 2),
+            CrunchDimensions.verticalPadding / 3),
         decoration: BoxDecoration(
           color: dominantColor,
           borderRadius: CrunchDimensions.roundBorderRadius,
@@ -57,14 +57,13 @@ class CrunchVoucherCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              padding: EdgeInsets.only(left: 2.w),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Stack(
+              children: [
+                Container(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(left: 2.w),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
@@ -83,23 +82,26 @@ class CrunchVoucherCard extends StatelessWidget {
                         ),
                         child: thumbnail,
                       ),
-                      Image.asset(
-                        'assets/illustrations/stars.png',
-                        width: 22.w,
+                      SizedBox(height: 2.5.h),
+                      CrunchText(
+                        'Up to'.toUpperCase(),
+                        style: CrunchTextStyles.subTitleWhite,
                       ),
-                      SizedBox(width: 2.w),
+                      CrunchText(desc, style: CrunchTextStyles.titleWhite),
                     ],
                   ),
-                  CrunchText(
-                    'Up to'.toUpperCase(),
-                    style: CrunchTextStyles.subTitleWhite,
+                ),
+                Positioned(
+                  right: 1.w,
+                  child: Image.asset(
+                    'assets/illustrations/stars.png',
+                    width: 22.w,
                   ),
-                  CrunchText(desc, style: CrunchTextStyles.titleWhite),
-                ],
-              ),
+                )
+              ],
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 1.5.h, 3.w, 0),
+              padding: EdgeInsets.fromLTRB(0, 0, 3.w, 0),
               child: Container(
                 height: 4.h,
                 decoration: BoxDecoration(
