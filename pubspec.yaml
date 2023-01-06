@@ -14,7 +14,7 @@ dependencies:
   fluttertoast: ^8.1.1
   flutter_signin_button: ^2.0.0
   flutter_svg: ^1.1.6
-  lottie: ^2.0.0
+  lottie: ^2.1.0
   flutter_neumorphic: ^3.2.0
   palette_generator: ^0.3.3+2
 
