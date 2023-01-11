@@ -12,7 +12,6 @@ export 'cards/error_card.dart';
 export 'cards/filter_chip_card.dart';
 export 'cards/loading_card.dart';
 export 'cards/neumorphic_card.dart';
-export 'cards/stepper_card.dart';
 export 'cards/transaction_status_card.dart';
 export 'general/alert_dialog.dart';
 export 'general/blur.dart';
