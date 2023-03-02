@@ -15,6 +15,8 @@ class CrunchInputField extends StatelessWidget {
   final FocusNode? focusNode;
   final Color? backgroundColor;
   final Function(String?)? onChanged;
+  final Function()? onTap;
+  final TextStyle? style;
 
   const CrunchInputField({
     Key? key,
@@ -28,6 +30,8 @@ class CrunchInputField extends StatelessWidget {
     this.focusNode,
     this.backgroundColor,
     this.onChanged,
+    this.style,
+    this.onTap,
   }) : super(key: key);
 
   @override
@@ -54,6 +58,9 @@ class CrunchInputField extends StatelessWidget {
         obscureText: obscureText,
         focusNode: focusNode,
         onChanged: onChanged,
+        style: style,
+        onTap: onTap,
+        keyboardType: textInputType,
       ),
     );
   }
