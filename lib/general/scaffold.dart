@@ -13,6 +13,7 @@ class CrunchScaffold extends StatelessWidget {
   final bool disableAppBar;
   final bool showLogoutButton;
   final Function()? onLogout;
+  final List<Widget> actions;
   final CrunchFloatingCenterButton? floatingCenterButton;
   final bool? resizeToAvoidBottomInsets;
   final String? overlayAssetPath;
@@ -28,6 +29,7 @@ class CrunchScaffold extends StatelessWidget {
     this.disableBack = false,
     this.disableAppBar = false,
     this.showLogoutButton = false,
+    this.actions = const [],
     this.onLogout,
     this.floatingCenterButton,
     this.overlayAssetPath,
@@ -62,6 +64,7 @@ class CrunchScaffold extends StatelessWidget {
                     backgroundColor: CrunchColors.superLightWhite,
                     actions: showLogoutButton
                         ? [
+                            ...actions,
                             IconButton(
                               padding: EdgeInsets.only(right: 4.w),
                               onPressed: onLogout,
@@ -71,7 +74,7 @@ class CrunchScaffold extends StatelessWidget {
                               ),
                             )
                           ]
-                        : null,
+                        : actions,
                   ),
           body: body != null
               ? kycBar != null
