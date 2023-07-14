@@ -1,6 +1,7 @@
 name: crunch_kit
 description: The PayCrunch UI kit
 version: 0.0.1
+publish_to: none
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
@@ -15,7 +16,10 @@ dependencies:
   flutter_signin_button: ^2.0.0
   flutter_svg: ^1.1.6
   lottie: ^2.1.0
-  flutter_neumorphic: ^3.2.0
+  flutter_neumorphic: 
+    git:
+      url: https://github.com/den0206/Flutter-Neumorphic.git
+      ref: feature/remoce_accentcolor
   palette_generator: ^0.3.3+2
 
 dev_dependencies:
