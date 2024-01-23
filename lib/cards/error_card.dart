@@ -42,15 +42,15 @@ class CrunchErrorCard extends StatelessWidget {
               ),
               SizedBox(width: 2.w),
               CrunchText(
-                title ?? 'Ah shit, here we go again...🤦🏻‍♂️',
-                style: CrunchTextStyles.tileTitleBlack,
+                title ?? 'Error',
+                style: CrunchTextStyles.titleGrey,
               ),
             ],
           ),
           SizedBox(height: 1.h),
           CrunchText(
             details ??
-                'There was a fuck up from our end and our best minds are on it. Hang tight!',
+                'Something went wrong!',
             style: CrunchTextStyles.subTitleRed,
             maxLines: 5,
           ),
