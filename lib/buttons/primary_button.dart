@@ -29,6 +29,8 @@ class CrunchPrimaryButton extends StatelessWidget {
         style: NeumorphicStyle(
           color: backgroundColor ?? CrunchColors.payCrunchBlue,
           shape: NeumorphicShape.convex,
+          shadowLightColor: Colors.transparent,
+          shadowDarkColor: CrunchColors.darkBlue,
           boxShape: NeumorphicBoxShape.roundRect(
             CrunchDimensions.circleBorderRadius,
           ),
@@ -43,7 +45,7 @@ class CrunchPrimaryButton extends StatelessWidget {
             baseColor: textColor,
             highlightColor: highlightColor,
             child: CrunchText(
-              text.toUpperCase(),
+              text.toLowerCase(),
               style: CrunchTextStyles.primaryButton,
             ),
           ),
