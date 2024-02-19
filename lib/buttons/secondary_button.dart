@@ -17,7 +17,7 @@ class CrunchSecondaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: CrunchColors.almostWhite,
+        backgroundColor: CrunchColors.almostWhite,
         fixedSize: Size(100.w - (CrunchDimensions.horizontalPadding * 2), 6.h),
         elevation: 1.0,
         shape: RoundedRectangleBorder(
