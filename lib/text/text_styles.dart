@@ -117,7 +117,7 @@ class CrunchTextStyles {
   static final headingExtendedGrey = TextStyle(
     color: CrunchColors.grey,
     fontFamily: 'MonumentExtended',
-    fontSize: 26.sp,
+    fontSize: 16.sp,
     fontWeight: FontWeight.w500,
   );
 
