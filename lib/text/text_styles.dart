@@ -114,11 +114,39 @@ class CrunchTextStyles {
     fontWeight: FontWeight.w500,
   );
 
+  static final headingExtendedGrey = TextStyle(
+    color: CrunchColors.grey,
+    fontFamily: 'MonumentExtended',
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final headingExtendedWhiteBold = TextStyle(
+    color: CrunchColors.almostWhite,
+    fontFamily: 'MonumentExtended',
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static final headingExtendedGreyBold = TextStyle(
+    color: CrunchColors.grey,
+    fontFamily: 'MonumentExtended',
+    fontSize: 26.sp,
+    fontWeight: FontWeight.w600,
+  );
+
   static final headingExtendedBlack = TextStyle(
     color: CrunchColors.almostBlack,
     fontFamily: 'MonumentExtended',
     fontSize: 26.sp,
     fontWeight: FontWeight.w500,
+  );
+
+  static final subTitleUrbanistSilver = TextStyle(
+    color: CrunchColors.silver,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Urbanist',
   );
 
   static final primaryButton = TextStyle(
