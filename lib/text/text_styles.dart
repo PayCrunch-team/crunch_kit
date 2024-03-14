@@ -172,4 +172,110 @@ class CrunchTextStyles {
     fontSize: 10.sp,
     fontWeight: FontWeight.w500,
   );
+
+  //label
+
+  //labelSmall
+
+  static final labelSmallWhite = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+
+  static final labelSmallWhite45 = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w600,
+    color: const Color(0x73FFFFFF),
+  );
+
+  static final labelSmallWhite30 = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w600,
+    color: Colors.white30,
+  );
+
+  //labelMedium
+
+  static final labelMediumWhite = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+
+  // body
+
+  //bodySmall
+
+  static final bodySmallWhite = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+  );
+
+  static final bodySmallWhite38 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white38,
+  );
+
+  //bodyMedium
+
+  static final bodyMediumWhite = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+  );
+
+  //bodyLarge
+
+  static final bodyLargeWhite = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+  );
+
+  static final bodyLargeWhite70 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white70,
+  );
+
+  static final bodyLargeWhite60 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white60,
+  );
+
+  //title
+
+  //titleSmall
+
+  static final titleSmallWhite = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+
+  static final titleSmallPayCrunchBlue = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    color: CrunchColors.payCrunchBlue,
+  );
+
+  //titleMedium
+
+  static final titleMediumWhite = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+
+  //titleLarge
+
+  static final titleLargeWhite = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+  );
 }
