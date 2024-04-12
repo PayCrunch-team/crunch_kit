@@ -42,4 +42,22 @@ class CrunchColors {
   static var superLightRed = const Color(0xFFFA5A5A).withOpacity(0.15);
   static const superDarkRed = Color(0xFFC62828);
   static const infoYello = Color(0xFFFFC107);
+
+  //color design system
+
+  //blacks
+  static const blackB1 = Color(0xff0d0d0d);
+  static const blackB2 = Color(0xff121212);
+  static const blackB3 = Color(0xff202020);
+  static const blackB4 = Color(0xff2e2e2e);
+
+  //whites
+  static final whiteW1 = Color(0xffffffff).withAlpha(230);
+  static final whiteW2 = Color(0xffffffff).withAlpha(204);
+  static final whiteW3 = Color(0xffffffff).withAlpha(192);
+  static final whiteW4 = Color(0xffffffff).withAlpha(153);
+  static final whiteW5 = Color(0xffffffff).withAlpha(115);
+  static final whiteW6 = Color(0xffffffff).withAlpha(89);
+  static final whiteW7 = Color(0xffffffff).withAlpha(64);
+  static final whiteW8 = Color(0xffffffff).withAlpha(39);
 }
