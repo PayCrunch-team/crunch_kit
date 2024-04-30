@@ -135,6 +135,13 @@ class CrunchTextStyles {
     fontWeight: FontWeight.w600,
   );
 
+  static final headingExtendedUltraBold = TextStyle(
+    color: CrunchColors.whiteW1,
+    fontFamily: 'MonumentExtended',
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+  );
+
   static final headingExtendedBlack = TextStyle(
     color: CrunchColors.almostBlack,
     fontFamily: 'MonumentExtended',
