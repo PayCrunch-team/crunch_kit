@@ -45,6 +45,8 @@ class CrunchColors {
 
   //color design system
 
+  static const errorRedE2 = Color(0xffbe3d35);
+
   //blacks
   static const blackB1 = Color(0xff0d0d0d);
   static const blackB2 = Color(0xff121212);
