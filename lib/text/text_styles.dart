@@ -216,6 +216,11 @@ class CrunchTextStyles {
     color: CrunchColors.darkGrey,
   );
 
+  static final labelMedium = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w600,
+  );
+
   // body
 
   //bodySmall
@@ -233,6 +238,11 @@ class CrunchTextStyles {
   );
 
   //bodyMedium
+
+  static final bodyMedium = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+  );
 
   static final bodyMediumWhite = TextStyle(
     fontSize: 14.sp,
@@ -291,6 +301,12 @@ class CrunchTextStyles {
   );
 
   //titleLarge
+
+  static final titleLarge = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+  );
 
   static final titleLargeWhite = TextStyle(
     fontSize: 22.sp,
