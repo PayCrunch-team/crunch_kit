@@ -45,8 +45,6 @@ class CrunchColors {
 
   //color design system
 
-  static const errorRedE2 = Color(0xffbe3d35);
-
   //blacks
   static const blackB1 = Color(0xff0d0d0d);
   static const blackB2 = Color(0xff121212);
@@ -62,4 +60,11 @@ class CrunchColors {
   static final whiteW6 = Color(0xffffffff).withAlpha(89);
   static final whiteW7 = Color(0xffffffff).withAlpha(64);
   static final whiteW8 = Color(0xffffffff).withAlpha(39);
+
+  //greys
+  static final greyG1 = Color(0xFF494949);
+
+  //reds
+  static final errorRedE1 = Color(0xffEE4C42);
+  static final errorRedE2 = Color(0xffBE3D35);
 }

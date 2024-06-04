@@ -31,8 +31,8 @@ class CrunchSecondaryDarkButton extends StatelessWidget {
       },
       child: CrunchText(
         text.toLowerCase(),
-        style: CrunchTextStyles.secondaryButton
-            .copyWith(color: CrunchColors.almostBlack),
+        style: CrunchTextStyles.tileTitleWhite
+            .copyWith(color: CrunchColors.blackB2),
       ),
     );
   }

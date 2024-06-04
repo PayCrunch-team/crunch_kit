@@ -22,12 +22,12 @@ class CrunchPrimaryDarkButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 7.h,
-      width: 100.w - (CrunchDimensions.horizontalPadding * 2),
+      height: 6.h,
+      width: double.infinity,
       child: NeumorphicButton(
         provideHapticFeedback: false,
         style: NeumorphicStyle(
-          color: backgroundColor ?? CrunchColors.darkGrey,
+          color: backgroundColor ?? CrunchColors.blackB3,
           shape: NeumorphicShape.convex,
           shadowLightColor: Colors.transparent,
           boxShape: NeumorphicBoxShape.roundRect(
@@ -42,7 +42,8 @@ class CrunchPrimaryDarkButton extends StatelessWidget {
         child: Center(
           child: CrunchText(
             text.toLowerCase(),
-            style: CrunchTextStyles.primaryButton,
+            style: CrunchTextStyles.titleSmallWhite
+                .copyWith(color: CrunchColors.whiteW6),
           ),
         ),
       ),

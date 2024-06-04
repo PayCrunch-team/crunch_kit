@@ -9,6 +9,7 @@ class CrunchPrimaryButton extends StatelessWidget {
   final Color? backgroundColor;
   final Color? textColor;
   final Color? highlightColor;
+  final bool showGlow;
 
   const CrunchPrimaryButton({
     Key? key,
@@ -17,12 +18,13 @@ class CrunchPrimaryButton extends StatelessWidget {
     this.highlightColor,
     this.backgroundColor,
     this.textColor,
+    this.showGlow = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 7.h,
+      height: 6.h,
       width: 100.w - (CrunchDimensions.horizontalPadding * 2),
       child: NeumorphicButton(
         provideHapticFeedback: false,
@@ -30,7 +32,8 @@ class CrunchPrimaryButton extends StatelessWidget {
           color: backgroundColor ?? CrunchColors.payCrunchBlue,
           shape: NeumorphicShape.convex,
           shadowLightColor: Colors.transparent,
-          shadowDarkColor: CrunchColors.darkBlue,
+          shadowDarkColor:
+              showGlow ? CrunchColors.darkBlue : Colors.transparent,
           boxShape: NeumorphicBoxShape.roundRect(
             CrunchDimensions.circleBorderRadius,
           ),
@@ -46,7 +49,7 @@ class CrunchPrimaryButton extends StatelessWidget {
             highlightColor: highlightColor,
             child: CrunchText(
               text.toLowerCase(),
-              style: CrunchTextStyles.primaryButton,
+              style: CrunchTextStyles.titleSmallWhite,
             ),
           ),
         ),
