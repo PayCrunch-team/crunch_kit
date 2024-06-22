@@ -67,4 +67,7 @@ class CrunchColors {
   //reds
   static final errorRedE1 = Color(0xffEE4C42);
   static final errorRedE2 = Color(0xffBE3D35);
+
+  //greens
+  static const successGreenG1 = Color(0xFF43A047);
 }
