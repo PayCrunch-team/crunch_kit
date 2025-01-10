@@ -63,6 +63,7 @@ class CrunchColors {
 
   //greys
   static final greyG1 = Color(0xFF494949);
+  static const greyG2 = Color(0xff454545);
 
   //reds
   static final errorRedE1 = Color(0xffEE4C42);
@@ -70,4 +71,17 @@ class CrunchColors {
 
   //greens
   static const successGreenG1 = Color(0xFF43A047);
+
+  //yellows
+  static const notifyYellow = Color(0xFFFFC700);
+
+  //pastels
+  static const pastelBlue = Color(0xFFB0D0EE);
+  static const pastelYellow = Color(0xFFE2E896);
+  static const pastelPink = Color(0xFFD59A9A);
+  static const pastelGreen = Color(0xFF9FDEE2);
+  static const pastelPurple = Color(0xFFAFA3E0);
+
+  //corals
+  static const coralBlue = Color(0xFFB0D0EE);
 }

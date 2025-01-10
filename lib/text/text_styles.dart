@@ -182,6 +182,13 @@ class CrunchTextStyles {
 
   //label
 
+  //label extraSmall
+
+  static final labelExtraSmall = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w500,
+  );
+
   //labelSmall
 
   static final labelSmallWhite = TextStyle(
@@ -274,6 +281,11 @@ class CrunchTextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
     color: Colors.white60,
+  );
+
+  static final bodyLargeBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
   );
 
   //title
